@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Business Dashboard | Khet Se Ghar</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/business_dashboard.css">
+    <link rel="stylesheet" href="css/business-voice-assistance.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="business-dashboard">
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="business-sidebar">
+
+        <div class="business-brand">
+            <span class="brand-icon">K</span>
+            <div>
+                <strong>Khet Se Ghar</strong>
+                <small>BUSINESS PORTAL</small>
+            </div>
+        </div>
+
+        <p class="sidebar-label">WORKSPACE</p>
+
+        <nav class="business-nav">
+
+            <p class="nav-heading">MAIN MENU</p>
+
+            <a href="#" class="active">
+                <span class="nav-icon">OV</span>
+                <span class="nav-text">Overview</span>
+            </a>
+
+            <a href="#bulk-procurement">
+                <span class="nav-icon">BL</span>
+                <span class="nav-text">Bulk Procurement</span>
+            </a>
+
+            <a href="business_cart.html">
+                <span class="nav-icon">CA</span>
+                <span class="nav-text">My Cart</span>
+            </a>
+
+            <a href="business_orders.html">
+                <span class="nav-icon">OR</span>
+                <span class="nav-text">My Orders</span>
+            </a>
+
+            <a href="#catalogue">
+                <span class="nav-icon">SU</span>
+                <span class="nav-text">Suppliers</span>
+            </a>
+
+            <a href="#recent-orders">
+                <span class="nav-icon">PY</span>
+                <span class="nav-text">Payments</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#">
+                <span class="nav-icon">⚙</span>
+                Profile Settings
+            </a>
+
+            <a href="/logout" class="logout-link">
+                <span class="nav-icon">↗</span>
+                Sign Out
+            </a>
+
+        </div>
+
+        <div class="sidebar-footer">
+            <span>KHET SE GHAR</span>
+            <small>Business Management Platform</small>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="business-main">
+
+        <!-- TOP HEADER -->
+
+        <header class="business-header">
+
+            <div class="header-left">
+                <span class="header-label">BUSINESS WORKSPACE</span>
+                <h1>Overview</h1>
+                <p>Manage your procurement, orders and business activity.</p>
+            </div>
+
+            <div class="business-account">
+                <div class="account-avatar">B</div>
+
+                <div class="account-details">
+                    <h4>Business Account</h4>
+                    <p>Registered Buyer</p>
+                </div>
+
+                <span class="account-status">Active</span>
+            </div>
+
+        </header>
+
+
+        <!-- WELCOME BANNER -->
+
+        <section class="business-welcome">
+
+            <div>
+                <span class="welcome-tag">BUSINESS PROCUREMENT</span>
+
+                <h2>Welcome to your business workspace.</h2>
+
+                <p>
+                    Source quality agricultural produce, explore suppliers
+                    and manage your business purchases through one platform.
+                </p>
+
+                <a href="#catalogue" class="welcome-button">
+                    Explore Product Catalogue
+                    <span>→</span>
+                </a>
+            </div>
+
+            <div class="welcome-decoration">
+                <span>KG</span>
+            </div>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+
+        <section class="business-stats">
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Total Orders</span>
+                    <span class="stat-symbol">01</span>
+                </div>
+                <h2>—</h2>
+                <p>Orders placed</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Pending Orders</span>
+                    <span class="stat-symbol">02</span>
+                </div>
+                <h2>—</h2>
+                <p>Awaiting completion</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Completed Orders</span>
+                    <span class="stat-symbol">03</span>
+                </div>
+                <h2>—</h2>
+                <p>Successfully delivered</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Total Spending</span>
+                    <span class="stat-symbol">04</span>
+                </div>
+                <h2>—</h2>
+                <p>Purchase value</p>
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="business-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Procurement Shortcuts</h2>
+                    <p>Access your frequently used business activities.</p>
+                </div>
+            </div>
+
+            <div class="quick-action-container">
+
+              <a href="#bulk-procurement" class="quick-action-card">
+                    <div class="action-icon">01</div>
+                    <div class="action-content">
+                        <h3>Browse Products</h3>
+                        <p>Explore available farm produce.</p>
+                    </div>
+                    <span class="action-arrow">↗</span>
+                </a>
+
+                <a href="business_cart.html" class="quick-action-card">
+                    <div class="action-icon">02</div>
+                    <div class="action-content">
+                        <h3>My Cart</h3>
+                        <p>Review selected agricultural products.</p>
+                    </div>
+                    <span class="action-arrow">↗</span>
+                </a>
+
+                <a href="business_orders.html" class="quick-action-card">
+                    <div class="action-icon">03</div>
+                    <div class="action-content">
+                        <h3>Order Management</h3>
+                        <p>Track purchases and delivery progress.</p>
+                    </div>
+                    <span class="action-arrow">↗</span>
+                </a>
+
+                <a href="#catalogue" class="quick-action-card">
+                    <div class="action-icon">04</div>
+                    <div class="action-content">
+                        <h3>Bulk Procurement</h3>
+                        <p>Purchase agricultural products.</p>
+                    </div>
+                    <span class="action-arrow">↗</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCT CATALOGUE -->
+
+        <section class="business-products-section" id="catalogue">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-eyebrow">PRODUCT SOURCING</span>
+                    <h2>Available Farm Products</h2>
+                    <p>
+                        Browse agricultural products available from our farmer network.
+                    </p>
+                </div>
+
+                <span class="catalogue-label">LIVE CATALOGUE</span>
+
+            </div>
+
+            <div id="business-products" class="business-products-grid">
+                <p>Loading products...</p>
+            </div>
+
+        </section>
+
+
+                <!-- BULK PROCUREMENT -->
+
+        <section class="business-section bulk-procurement-section"
+                 id="bulk-procurement">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-eyebrow">BULK SOURCING</span>
+                    <h2>Bulk Procurement</h2>
+                    <p>
+                        Publish large-volume produce requirements and
+                        manage supply contributions from farmers.
+                    </p>
+                </div>
+                <span class="catalogue-label">SUPPLY MANAGEMENT</span>
+            </div>
+
+            <!-- CREATE BULK REQUIREMENT -->
+
+            <div class="bulk-form-card">
+
+                <div class="bulk-card-heading">
+                    <h3>Create a Bulk Requirement</h3>
+                    <p>Specify the agricultural produce your business needs.</p>
+                </div>
+
+                <form id="bulk-requirement-form">
+
+                    <div class="bulk-form-grid">
+
+                        <div class="bulk-form-group">
+                            <label for="bulk-product-name">Product Name</label>
+                            <input
+                                type="text"
+                                id="bulk-product-name"
+                                placeholder="e.g. Fresh Tomatoes"
+                                maxlength="150"
+                                required
+                            >
+                        </div>
+
+                        <div class="bulk-form-group">
+                            <label for="bulk-required-quantity">Required Quantity</label>
+                            <input
+                                type="number"
+                                id="bulk-required-quantity"
+                                placeholder="e.g. 500"
+                                min="0.01"
+                                step="0.01"
+                                required
+                            >
+                        </div>
+
+                        <div class="bulk-form-group">
+                            <label for="bulk-unit">Unit</label>
+                            <select id="bulk-unit" required>
+                                <option value="kg">Kilogram (kg)</option>
+                                <option value="quintal">Quintal</option>
+                                <option value="ton">Ton</option>
+                                <option value="piece">Piece</option>
+                            </select>
+                        </div>
+
+                        <div class="bulk-form-group">
+                            <label for="bulk-offered-price">Offered Price Per Unit (₹)</label>
+                            <input
+                                type="number"
+                                id="bulk-offered-price"
+                                placeholder="e.g. 25"
+                                min="0.01"
+                                step="0.01"
+                                required
+                            >
+                        </div>
+
+                        <div class="bulk-form-group">
+                            <label for="bulk-deadline">Delivery Deadline (Optional)</label>
+                            <input
+                                type="date"
+                                id="bulk-deadline"
+                            >
+                        </div>
+
+                    </div>
+
+                    <div id="bulk-form-message" class="bulk-form-message"></div>
+
+                    <button type="submit" class="bulk-submit-button">
+                        Publish Bulk Requirement
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- BUSINESS BULK REQUIREMENTS -->
+
+            <div class="bulk-list-card">
+
+                <div class="bulk-card-heading">
+                    <h3>Your Bulk Requirements</h3>
+                    <p>Track supply progress and farmer contributions.</p>
+                </div>
+
+                <div id="business-bulk-orders">
+                    <p>Loading your bulk requirements...</p>
+                </div>
+
+            </div>
+
+            <!-- FARMER CONTRIBUTIONS -->
+
+            <div class="bulk-list-card">
+
+                <div class="bulk-card-heading">
+                    <h3>Farmer Contributions</h3>
+                    <p>Review and manage farmer supply requests.</p>
+                </div>
+
+                <div id="business-bulk-contributions">
+                    <p>Loading farmer contributions...</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+       
+        <!-- FOOTER -->
+
+        <footer class="business-footer">
+            <span>© 2026 Khet Se Ghar</span>
+            <span>Business Procurement Portal</span>
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- BUSINESS VOICE ASSISTANT -->
+
+<div id="business-voice-widget">
+
+    <button id="business-voice-toggle" type="button"
+            aria-label="Open voice assistant">
+        🎤
+    </button>
+
+    <div id="business-voice-panel">
+
+        <div class="business-voice-header">
+            <h3>Business Voice Assistant</h3>
+            <button id="business-voice-close" type="button"
+                    aria-label="Close voice assistant">
+                ×
+            </button>
+        </div>
+
+        <div class="business-voice-field">
+            <label for="business-voice-language">
+                Select Language
+            </label>
+
+            <select id="business-voice-language">
+                <option value="en-IN">English</option>
+                <option value="hi-IN">हिन्दी</option>
+                <option value="or-IN">ଓଡ଼ିଆ</option>
+            </select>
+        </div>
+
+        <button id="business-voice-start" type="button">
+            🎤 Start Listening
+        </button>
+
+        <div id="business-voice-status" aria-live="polite">
+            Assistant is ready.
+        </div>
+
+        <div id="business-voice-transcript" aria-live="polite">
+            Your spoken command will appear here.
+        </div>
+
+        <div id="business-voice-response" aria-live="polite">
+            Welcome to your business assistant.
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/business_dashboard.js"></script>
+<script src="js/business-voice-assistance.js"></script>
+
+</body>
+</html>

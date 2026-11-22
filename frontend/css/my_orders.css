@@ -1,0 +1,366 @@
+
+/* ==========================================
+   KHET SE GHAR - CUSTOMER ORDER TRACKING
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+body {
+    background: #f5f7f5;
+    color: #252b25;
+}
+
+/* HEADER */
+.orders-header {
+    background: #ffffff;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    color: #238447;
+    font-size: 23px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.back-link {
+    color: #238447;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: #174f2c;
+}
+
+/* MAIN CONTAINER */
+.orders-container {
+    max-width: 1100px;
+    margin: 45px auto;
+    padding: 0 20px;
+    min-height: 65vh;
+}
+
+.orders-heading {
+    margin-bottom: 30px;
+}
+
+.orders-heading h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: #203b28;
+}
+
+.orders-heading p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* ORDER LIST */
+#orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.loading-message,
+.empty-orders {
+    background: white;
+    padding: 45px 20px;
+    text-align: center;
+    border-radius: 12px;
+    color: #777;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+/* ORDER CARD */
+.order-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 26px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e9eee9;
+}
+
+.order-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.order-id {
+    font-size: 17px;
+    font-weight: 800;
+    color: #25352b;
+}
+
+.order-date {
+    color: #888;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+/* ORDER STATUS */
+.order-status {
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    background: #e8f3eb;
+    color: #238447;
+    text-transform: capitalize;
+}
+
+.order-status:empty {
+    display: none;
+}
+
+/* ORDER TRACKING */
+.tracking-section {
+    padding: 30px 5px 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.tracking-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: #25352b;
+    margin-bottom: 30px;
+}
+
+.tracking-timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    gap: 5px;
+    width: 100%;
+}
+
+/* EACH TRACKING STAGE */
+.tracking-step {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* CONNECTING LINES */
+.tracking-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    background: #e2e8e2;
+    width: 100%;
+    left: 50%;
+    top: 15px;
+    z-index: -1;
+    transition: background 0.3s ease;
+}
+
+/* COMPLETED CONNECTING LINES */
+.tracking-step.completed:not(:last-child)::after {
+    background: #238447 !important;
+}
+
+/* TRACKING CIRCLE */
+.tracking-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #e8ece8;
+    color: #8b948b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 12px;
+    font-size: 15px;
+    font-weight: 800;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 1px #dce3dc;
+    transition: all 0.3s ease;
+}
+
+/* COMPLETED TRACKING CIRCLE */
+.tracking-step.completed .tracking-icon {
+    background: #238447 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 0 2px #238447 !important;
+    border-color: #ffffff;
+}
+
+/* TRACKING LABEL */
+.tracking-label {
+    font-size: 11px;
+    color: #929a92;
+    font-weight: 600;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+}
+
+/* COMPLETED TRACKING LABEL */
+.tracking-step.completed .tracking-label {
+    color: #238447 !important;
+    font-weight: 800;
+}
+
+/* CANCELLED ORDER */
+.cancelled-message {
+    background: #fff0f0;
+    color: #bd3333;
+    padding: 14px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 20px;
+    border: 1px solid #f5d1d1;
+}
+
+/* ORDER DETAILS */
+.order-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.order-details p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.order-address {
+    color: #777;
+    font-size: 13px;
+    margin-top: 16px;
+    line-height: 1.6;
+}
+
+.order-total {
+    color: #238447;
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 15px;
+}
+
+/* FOOTER */
+.orders-footer {
+    background: #203b28;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .orders-container {
+        margin: 35px auto;
+    }
+
+    .order-card {
+        padding: 22px;
+    }
+
+    .tracking-section {
+        padding: 25px 0 20px;
+    }
+
+    .tracking-label {
+        font-size: 10px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .orders-header {
+        padding: 17px 5%;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .back-link {
+        font-size: 12px;
+    }
+
+    .orders-container {
+        margin: 30px auto;
+        padding: 0 12px;
+    }
+
+    .orders-heading h1 {
+        font-size: 25px;
+    }
+
+    .order-card {
+        padding: 18px 12px;
+    }
+
+    .tracking-section {
+        padding: 25px 0 20px;
+    }
+
+    .tracking-title {
+        font-size: 15px;
+    }
+
+    .tracking-timeline {
+        gap: 2px;
+    }
+
+    .tracking-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+        margin-bottom: 9px;
+    }
+
+    .tracking-step:not(:last-child)::after {
+        top: 12px;
+        height: 3px;
+    }
+
+    .tracking-label {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+    .order-total {
+        font-size: 18px;
+    }
+}
+
+/* VERY SMALL SCREENS */
+@media (max-width: 380px) {
+    .tracking-label {
+        font-size: 8px;
+    }
+
+    .tracking-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 11px;
+    }
+
+    .tracking-step:not(:last-child)::after {
+        top: 11px;
+    }
+}

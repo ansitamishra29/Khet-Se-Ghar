@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Dashboard | Khet Se Ghar</title>
+
+    <link rel="stylesheet" href="css/customer_dashboard.css">
+    <link rel="stylesheet" href="css/customer-voice-assistance.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="customer-header">
+    <div class="header-container">
+
+        <a href="index.html" class="customer-logo">
+            🌾 <span>Khet Se Ghar</span>
+        </a>
+
+        <div class="search-box">
+            <input type="text"
+                   placeholder="Search fresh vegetables, fruits..."
+                   data-i18n-placeholder="searchPlaceholder">
+
+            <button type="button" data-i18n="search">Search</button>
+        </div>
+
+        <nav class="customer-nav">
+            <a href="#shop" data-i18n="shop">Shop</a>
+            <a href="cart.html" data-i18n="myCart">My Cart</a>
+            <a href="my_orders.html" data-i18n="myOrders">My Orders</a>
+            <a href="#profile" data-i18n="myProfile">My Profile</a>
+            <a href="/logout" class="logout-link" data-i18n="logout">Logout</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- CATEGORY NAVIGATION -->
+<div class="category-nav">
+    <a href="#vegetables" data-i18n="vegetables">Vegetables</a>
+    <a href="#fruits" data-i18n="fruits">Fruits</a>
+    <a href="#grains" data-i18n="grains">Grains</a>
+    <a href="#dairy" data-i18n="dairy">Dairy</a>
+    <a href="#offers" data-i18n="specialOffers">Special Offers</a>
+</div>
+
+
+<!-- HERO SECTION -->
+<section class="customer-hero">
+
+    <div class="hero-content">
+
+        <span class="hero-tag" data-i18n="heroTag">
+            FRESHNESS YOU CAN TRUST
+        </span>
+
+        <h1 data-i18n="heroTitle">
+            Fresh From Farm, Delivered To Home.
+        </h1>
+
+        <p data-i18n="heroText">
+            Enjoy fresh and quality farm products directly through Khet Se Ghar.
+        </p>
+
+        <a href="#shop" class="hero-btn" data-i18n="exploreProducts">
+            Explore Products
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- MAIN CONTENT -->
+<main class="customer-container">
+
+    <!-- SHOP BY CATEGORY -->
+    <section class="shop-section" id="shop">
+
+        <div class="section-heading">
+            <div>
+                <h2 data-i18n="shopByCategory">Shop by Category</h2>
+                <p data-i18n="categoryDescription">
+                    Explore fresh products from local farms
+                </p>
+            </div>
+        </div>
+
+        <div class="category-grid">
+
+            <a href="#vegetables" class="category-card" id="vegetables">
+                <span>🥦</span>
+                <h3 data-i18n="vegetables">Vegetables</h3>
+            </a>
+
+            <a href="#fruits" class="category-card" id="fruits">
+                <span>🍎</span>
+                <h3 data-i18n="fruits">Fruits</h3>
+            </a>
+
+            <a href="#grains" class="category-card" id="grains">
+                <span>🌾</span>
+                <h3 data-i18n="grains">Grains</h3>
+            </a>
+
+            <a href="#dairy" class="category-card" id="dairy">
+                <span>🥛</span>
+                <h3 data-i18n="dairyProducts">Dairy Products</h3>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- POPULAR PRODUCTS -->
+    <section class="shop-section">
+
+        <div class="section-heading">
+
+            <div>
+                <h2 data-i18n="popularProducts">Popular Farm Products</h2>
+                <p data-i18n="popularDescription">
+                    Fresh picks for your everyday needs
+                </p>
+            </div>
+
+            <a href="#shop" class="view-all" data-i18n="viewAllProducts">
+                View All Products →
+            </a>
+
+        </div>
+
+
+        <div class="product-grid">
+
+            <!-- POTATOES -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/potatoes.jpg" alt="Fresh Potatoes">
+                    <span class="fresh-badge" data-i18n="freshLocal">
+                        Fresh & Local
+                    </span>
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category" data-i18n="vegetables">
+                        Vegetables
+                    </span>
+
+                    <h3 data-i18n="freshPotatoes">Fresh Potatoes</h3>
+
+                    <p data-i18n="potatoDescription">Farm fresh quality</p>
+
+                    <small class="farmer-info" data-i18n="localFarmer">
+                        👨‍🌾 Local Farmer
+                    </small>
+
+                    <div class="product-price">
+                        ₹30 <small>/ kg</small>
+                    </div>
+
+                    <div class="quantity-control" hidden>
+                        <button type="button" class="quantity-minus">−</button>
+                        <span class="quantity-value">1</span>
+                        <button type="button" class="quantity-plus">+</button>
+                    </div>
+
+                    <button type="button" class="add-cart-btn" data-i18n="add">
+                        ADD
+                    </button>
+
+                </div>
+            </div>
+
+
+            <!-- TOMATOES -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/Tomatos.jpg" alt="Fresh Tomatoes">
+                    <span class="fresh-badge" data-i18n="freshLocal">
+                        Fresh & Local
+                    </span>
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category" data-i18n="vegetables">
+                        Vegetables
+                    </span>
+
+                    <h3 data-i18n="freshTomatoes">Fresh Tomatoes</h3>
+
+                    <p data-i18n="tomatoDescription">Locally harvested</p>
+
+                    <small class="farmer-info" data-i18n="localFarmer">
+                        👨‍🌾 Local Farmer
+                    </small>
+
+                    <div class="product-price">
+                        ₹40 <small>/ kg</small>
+                    </div>
+
+                    <div class="quantity-control" hidden>
+                        <button type="button" class="quantity-minus">−</button>
+                        <span class="quantity-value">1</span>
+                        <button type="button" class="quantity-plus">+</button>
+                    </div>
+
+                    <button type="button" class="add-cart-btn" data-i18n="add">
+                        ADD
+                    </button>
+
+                </div>
+            </div>
+
+
+            <!-- BANANAS -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/Bananas.jpg" alt="Fresh Bananas">
+                    <span class="fresh-badge" data-i18n="freshLocal">
+                        Fresh & Local
+                    </span>
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category" data-i18n="fruits">
+                        Fruits
+                    </span>
+
+                    <h3 data-i18n="freshBananas">Fresh Bananas</h3>
+
+                    <p data-i18n="bananaDescription">Naturally ripened</p>
+
+                    <small class="farmer-info" data-i18n="localFarmer">
+                        👨‍🌾 Local Farmer
+                    </small>
+
+                    <div class="product-price">
+                        ₹50 <small>/ dozen</small>
+                    </div>
+
+                    <div class="quantity-control" hidden>
+                        <button type="button" class="quantity-minus">−</button>
+                        <span class="quantity-value">1</span>
+                        <button type="button" class="quantity-plus">+</button>
+                    </div>
+
+                    <button type="button" class="add-cart-btn" data-i18n="add">
+                        ADD
+                    </button>
+
+                </div>
+            </div>
+
+
+            <!-- CARROTS -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/Carrots.jpg" alt="Fresh Carrots">
+                    <span class="fresh-badge" data-i18n="freshLocal">
+                        Fresh & Local
+                    </span>
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category" data-i18n="vegetables">
+                        Vegetables
+                    </span>
+
+                    <h3 data-i18n="freshCarrots">Fresh Carrots</h3>
+
+                    <p data-i18n="carrotDescription">Selected farm produce</p>
+
+                    <small class="farmer-info" data-i18n="localFarmer">
+                        👨‍🌾 Local Farmer
+                    </small>
+
+                    <div class="product-price">
+                        ₹45 <small>/ kg</small>
+                    </div>
+
+                    <div class="quantity-control" hidden>
+                        <button type="button" class="quantity-minus">−</button>
+                        <span class="quantity-value">1</span>
+                        <button type="button" class="quantity-plus">+</button>
+                    </div>
+
+                    <button type="button" class="add-cart-btn" data-i18n="add">
+                        ADD
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SPECIAL OFFERS -->
+    <section class="offer-section" id="offers">
+
+        <div class="offer-content">
+
+            <span data-i18n="freshDeals">FRESH DEALS</span>
+
+            <h2 data-i18n="betterPrices">
+                Good Food. Better Prices.
+            </h2>
+
+            <p data-i18n="offerDescription">
+                Discover special deals on selected farm-fresh products.
+            </p>
+
+            <a href="#shop" class="offer-btn" data-i18n="exploreDeals">
+                Explore Deals
+            </a>
+
+        </div>
+
+        <div class="offer-icon">🧺</div>
+
+    </section>
+
+
+    <!-- MY PROFILE -->
+    <section class="customer-extra-section" id="profile">
+
+        <h2 data-i18n="myProfile">My Profile</h2>
+
+        <p data-i18n="profileDescription">
+            Manage your personal information here.
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="customer-footer">
+
+    <h3>🌾 Khet Se Ghar</h3>
+
+    <p data-i18n="footerDescription">
+        Connecting local farms to your home.
+    </p>
+
+    <p class="footer-copy" data-i18n="copyright">
+        © 2026 Khet Se Ghar. All Rights Reserved.
+    </p>
+
+</footer>
+
+<!-- CUSTOMER VOICE ASSISTANT -->
+
+<div id="customer-voice-widget">
+
+    <button id="customer-voice-toggle" type="button"
+            aria-label="Open voice assistant">
+        🎤
+    </button>
+
+    <div id="customer-voice-panel">
+
+        <div class="customer-voice-header">
+            <h3>Customer Voice Assistant</h3>
+
+            <button id="customer-voice-close" type="button"
+                    aria-label="Close voice assistant">
+                ×
+            </button>
+        </div>
+
+        <div class="customer-voice-field">
+            <label for="customer-voice-language">
+                Select Language
+            </label>
+
+            <select id="customer-voice-language">
+                <option value="en-IN">English</option>
+                <option value="hi-IN">हिन्दी</option>
+                <option value="or-IN">ଓଡ଼ିଆ</option>
+            </select>
+        </div>
+
+        <button id="customer-voice-start" type="button">
+            🎤 Start Listening
+        </button>
+
+        <div id="customer-voice-status" aria-live="polite">
+            Assistant is ready.
+        </div>
+
+        <div id="customer-voice-transcript" aria-live="polite">
+            Your spoken command will appear here.
+        </div>
+
+        <div id="customer-voice-response" aria-live="polite">
+            Welcome to your customer assistant.
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/translations.js"></script>
+<script src="js/customer_dashboard.js"></script>
+<script src="js/customer-voice-assistance.js"></script>
+
+</body>
+</html>

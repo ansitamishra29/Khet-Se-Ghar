@@ -1,0 +1,146 @@
+
+/* =====================================
+   KHET SE GHAR - FARMER VOICE ASSISTANT
+===================================== */
+
+#farmer-voice-widget {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 9999;
+    font-family: inherit;
+}
+
+#voice-toggle {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background: #247a45;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.22);
+    transition: 0.2s ease;
+}
+
+#voice-toggle:hover {
+    background: #185e34;
+    transform: scale(1.06);
+}
+
+#voice-panel {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 75px;
+    width: 320px;
+    max-width: calc(100vw - 35px);
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e5e9e5;
+    border-radius: 16px;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.18);
+}
+
+#voice-panel.open {
+    display: block;
+}
+
+.voice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.voice-header h3 {
+    margin: 0;
+    color: #205b36;
+    font-size: 17px;
+}
+
+#voice-close {
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+    color: #555;
+}
+
+.voice-description {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+#voice-language {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d7ded8;
+    border-radius: 8px;
+    background: #fff;
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
+#voice-start {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #247a45;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#voice-start:hover {
+    background: #185e34;
+}
+
+#voice-status,
+#voice-transcript,
+#voice-response {
+    padding: 11px;
+    margin-top: 12px;
+    border-radius: 8px;
+    background: #f4f7f4;
+    color: #444;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+#voice-status {
+    color: #247a45;
+    font-weight: 600;
+}
+
+#voice-response {
+    background: #edf6ef;
+}
+
+@media (max-width: 480px) {
+    #farmer-voice-widget {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    #voice-panel {
+        width: 290px;
+    }
+}
+
+
+/* Voice navigation highlight */
+
+.voice-highlight {
+    outline: 3px solid #247a45;
+    outline-offset: 5px;
+    border-radius: 10px;
+    transition: outline 0.3s ease;
+}
+

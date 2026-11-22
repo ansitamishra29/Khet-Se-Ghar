@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard | Khet Se Ghar</title>
+    <link rel="stylesheet" href="css/farmer_dashboard.css">
+    <link rel="stylesheet" href="css/voice-assistance.css">
+</head>
+<body>
+
+<div class="farmer-dashboard">
+
+    <aside class="farmer-sidebar">
+
+        <div class="farmer-brand">🌱 Khet Se Ghar</div>
+
+        <p class="sidebar-label" data-i18n="farmerMenu">FARMER MENU</p>
+
+        <nav class="farmer-nav">
+            <a href="#dashboard" class="active">🏠 <span data-i18n="dashboard">Dashboard</span></a>
+            <a href="#products">🌾 <span data-i18n="myProducts">My Products</span></a>
+            <a href="#add-product">➕ <span data-i18n="addProduct">Add Product</span></a>
+            <a href="#orders">📦 <span data-i18n="orders">Orders</span></a>
+            <a href="#harvest">🌱 <span data-i18n="harvest">Harvest Management</span></a>
+            <a href="#bulk-supply">🤝 <span data-i18n="bulkSupply">Bulk Supply</span></a>
+            <a href="#income-expenses">💰 <span data-i18n="incomeExpenses">Income & Expenses</span></a>
+            <a href="#profile">👤 <span data-i18n="myProfile">My Profile</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-support">
+                <span>🌱</span>
+                <h3 data-i18n="needHelp">Need Help?</h3>
+                <p data-i18n="supportText">We're here to support your farming journey.</p>
+                <a href="mailto:support@khetseghar.in" data-i18n="contactSupport">Contact Support</a>
+            </div>
+
+            <a href="index.html" class="sidebar-home">
+                <span>←</span> <span data-i18n="backHome">Back to Home</span>
+            </a>
+
+            <a href="/logout" class="sidebar-home">
+                🚪 <span data-i18n="logout">Logout</span>
+            </a>
+
+            <div class="sidebar-footer">
+                <p>© 2026 Khet Se Ghar</p>
+                <a href="mailto:support@khetseghar.in">support@khetseghar.in</a>
+                <span data-i18n="footerTagline">Connecting Farms to Homes</span>
+            </div>
+
+        </div>
+    </aside>
+
+    <main class="farmer-main">
+
+        <div id="dashboard"></div>
+
+        <header class="farmer-header">
+            <div>
+                <h1 data-i18n="dashboardTitle">Farmer Dashboard</h1>
+                <p data-i18n="dashboardSubtitle">Manage your farm and grow your business.</p>
+            </div>
+
+            <div class="farmer-header-actions">
+                <div class="farmer-welcome">
+                    🌿 <span data-i18n="welcomeFarmer">Welcome, Farmer!</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="dashboard-welcome">
+            <h2 data-i18n="welcomeTitle">Welcome to Your Farm Dashboard!</h2>
+            <p data-i18n="welcomeText">Manage your products, track orders and monitor your earnings all in one place.</p>
+        </section>
+
+        <section class="stats-container">
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 4C12 4 5 7 5 14c0 3 2 5 5 5 7 0 10-7 10-15Z"/>
+                        <path d="M4 21c3-6 7-9 12-12"/>
+                    </svg>
+                </div>
+                <h3 data-i18n="totalProducts">Total Products</h3>
+                <h2 data-localize-numbers>12</h2>
+                <p data-i18n="productsListed">Products listed</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 7 12 2l9 5v10l-9 5-9-5V7Z"/>
+                        <path d="M3 7l9 5 9-5"/>
+                        <path d="M12 12v10"/>
+                        <path d="M7.5 4.5l9 5"/>
+                    </svg>
+                </div>
+                <h3 data-i18n="activeOrders">Active Orders</h3>
+                <h2 data-localize-numbers>08</h2>
+                <p data-i18n="ordersProgress">Orders in progress</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="2" y="5" width="20" height="15" rx="2"/>
+                        <path d="M2 10h20"/>
+                        <path d="M16 15h3"/>
+                        <path d="M12 2v2"/>
+                    </svg>
+                </div>
+                <h3 data-i18n="totalEarnings">Total Earnings</h3>
+                <h2 data-localize-numbers>₹15,600</h2>
+                <p data-i18n="overallEarnings">Overall earnings</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="9"/>
+                        <path d="M12 7v5l3 2"/>
+                    </svg>
+                </div>
+                <h3 data-i18n="pendingOrders">Pending Orders</h3>
+                <h2 data-localize-numbers>03</h2>
+                <p data-i18n="awaitingProcessing">Awaiting processing</p>
+            </div>
+
+        </section>
+
+        <section class="dashboard-section">
+            <div class="section-header">
+                <h2 data-i18n="productionRequests">Production Requests</h2>
+                <p data-i18n="partnerRequests">Requests received from your local partners</p>
+            </div>
+
+            <div id="farmer-production-requests">
+                <p data-i18n="loadingRequests">Loading production requests...</p>
+            </div>
+        </section>
+
+        <section class="recent-orders" id="orders">
+
+            <div class="section-heading">
+                <div>
+                    <h2 data-i18n="recentOrders">Recent Orders</h2>
+                    <p data-i18n="latestOrders">Keep track of your latest customer orders.</p>
+                </div>
+                <a href="#orders" class="view-all" data-i18n="viewAll">View All</a>
+            </div>
+
+            <div class="orders-table-container">
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th data-i18n="orderId">Order ID</th>
+                            <th data-i18n="product">Product</th>
+                            <th data-i18n="quantity">Quantity</th>
+                            <th data-i18n="orderDate">Order Date</th>
+                            <th data-i18n="status">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#KSG001</td>
+                            <td>Fresh Tomatoes</td>
+                            <td data-localize-numbers>20 kg</td>
+                            <td data-localize-numbers>13 <span data-i18n="november">Nov</span> 2026</td>
+                            <td><span class="order-status delivered" data-i18n="delivered">Delivered</span></td>
+                        </tr>
+                        <tr>
+                            <td>#KSG002</td>
+                            <td>Organic Potatoes</td>
+                            <td data-localize-numbers>15 kg</td>
+                            <td data-localize-numbers>12 <span data-i18n="november">Nov</span> 2026</td>
+                            <td><span class="order-status processing" data-i18n="processing">Processing</span></td>
+                        </tr>
+                        <tr>
+                            <td>#KSG003</td>
+                            <td>Fresh Onions</td>
+                            <td data-localize-numbers>25 kg</td>
+                            <td data-localize-numbers>12 <span data-i18n="november">Nov</span> 2026</td>
+                            <td><span class="order-status pending" data-i18n="pending">Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="quick-actions" id="quick-actions">
+
+            <div class="section-heading">
+                <div>
+                    <h2 data-i18n="quickActions">Quick Actions</h2>
+                    <p data-i18n="farmActivities">Manage your farm activities easily.</p>
+                </div>
+            </div>
+
+            <div class="actions-container">
+
+                <a href="#add-product" class="action-card" id="add-product">
+                    <span>＋</span>
+                    <h3 data-i18n="addNewProduct">Add New Product</h3>
+                    <p data-i18n="listProducts">List your fresh farm products.</p>
+                </a>
+
+                <a href="#products" class="action-card" id="products">
+                    <span>▤</span>
+                    <h3 data-i18n="manageProducts">Manage Products</h3>
+                    <p data-i18n="updateListings">Update or manage your listings.</p>
+                </a>
+
+                <a href="#orders" class="action-card">
+                    <span>▣</span>
+                    <h3 data-i18n="viewOrders">View All Orders</h3>
+                    <p data-i18n="trackOrders">Track your customer orders.</p>
+                </a>
+
+                <a href="#harvest" class="action-card">
+                    <span>⌁</span>
+                    <h3 data-i18n="updateHarvest">Update Harvest</h3>
+                    <p data-i18n="upcomingHarvest">Manage your upcoming harvest.</p>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="farmer-profile" id="profile">
+
+            <div class="section-heading">
+                <div>
+                    <h2 data-i18n="farmProfile">My Farm Profile</h2>
+                    <p data-i18n="farmInformation">Your farming and contact information.</p>
+                </div>
+                <a href="#profile" class="view-all" data-i18n="editProfile">Edit Profile</a>
+            </div>
+
+            <div class="profile-details">
+                <div class="profile-avatar">🌾</div>
+
+                <div class="profile-info">
+                    <h3><span data-i18n="farmerNameLabel">Farmer Name:</span> Rajesh Kumar</h3>
+                    <p><span data-i18n="farmerIdLabel">Farmer ID:</span> KSG-F001</p>
+                    <p>📍 <span data-i18n="locationLabel">Location:</span> Cuttack, Odisha</p>
+                    <p>📞 <span data-i18n="phoneLabel">Phone:</span> +91 98765 43210</p>
+                </div>
+
+                <div class="verification-status">
+                    <span>✓ <span data-i18n="verifiedFarmer">Verified Farmer</span></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="harvest-overview" id="harvest">
+
+            <div class="section-heading">
+                <div>
+                    <h2 data-i18n="harvestOverview">Harvest Overview</h2>
+                    <p data-i18n="harvestDescription">Keep track of your upcoming and available harvest.</p>
+                </div>
+                <a href="#harvest" class="view-all" data-i18n="viewAll">View All</a>
+            </div>
+
+            <div class="harvest-container">
+
+                <div class="harvest-card">
+                    <h3 data-i18n="tomatoes">Tomatoes</h3>
+                    <p class="harvest-quantity" data-localize-numbers>120 kg</p>
+                    <p data-localize-numbers><span data-i18n="expected">Expected:</span> 18 <span data-i18n="november">Nov</span> 2026</p>
+                    <span class="harvest-status upcoming" data-i18n="upcoming">Upcoming</span>
+                </div>
+
+                <div class="harvest-card">
+                    <h3 data-i18n="potatoes">Potatoes</h3>
+                    <p class="harvest-quantity" data-localize-numbers>200 kg</p>
+                    <p data-localize-numbers><span data-i18n="expected">Expected:</span> 20 <span data-i18n="november">Nov</span> 2026</p>
+                    <span class="harvest-status ready" data-i18n="readySoon">Ready Soon</span>
+                </div>
+
+                <div class="harvest-card">
+                    <h3 data-i18n="onions">Onions</h3>
+                    <p class="harvest-quantity" data-localize-numbers>80 kg</p>
+                    <p data-localize-numbers><span data-i18n="expected">Expected:</span> 25 <span data-i18n="november">Nov</span> 2026</p>
+                    <span class="harvest-status upcoming" data-i18n="upcoming">Upcoming</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bulk-supply" id="bulk-supply">
+
+            <div class="section-heading">
+                <div>
+                    <h2 data-i18n="bulkOpportunities">Bulk Supply Opportunities</h2>
+                    <p data-i18n="bulkDescription">Explore business requirements and contribute your farm produce.</p>
+                </div>
+                <span class="bulk-status open" data-i18n="farmerSupply">FARMER SUPPLY</span>
+            </div>
+
+            <div class="bulk-list-card">
+                <div class="bulk-card-heading">
+                    <h3 data-i18n="businessRequirements">Available Business Requirements</h3>
+                    <p data-i18n="chooseRequirement">Choose a requirement that matches your available produce.</p>
+                </div>
+
+                <div id="farmer-bulk-orders">
+                    <p data-i18n="loadingBulk">Loading available bulk requirements...</p>
+                </div>
+            </div>
+
+            <div class="bulk-list-card">
+                <div class="bulk-card-heading">
+                    <h3 data-i18n="myContributions">My Bulk Contributions</h3>
+                    <p data-i18n="contributionDescription">Track the quantities you have offered to businesses.</p>
+                </div>
+
+                <div id="farmer-bulk-contributions">
+                    <p data-i18n="contributionRecords">Your contribution records will appear here.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="income-expenses" id="income-expenses">
+
+            <div class="section-heading">
+                <div>
+                    <h2 data-i18n="incomeTitle">Income & Expenses</h2>
+                    <p data-i18n="financeDescription">Monitor your farm's financial performance.</p>
+                </div>
+            </div>
+
+            <div class="finance-container">
+                <div class="finance-card">
+                    <h3 data-i18n="totalIncome">Total Income</h3>
+                    <h2 data-localize-numbers>₹25,000</h2>
+                    <p data-i18n="moneyEarned">Money earned from sales</p>
+                </div>
+
+                <div class="finance-card">
+                    <h3 data-i18n="totalExpenses">Total Expenses</h3>
+                    <h2 data-localize-numbers>₹8,500</h2>
+                    <p data-i18n="farmingCosts">Farming and production costs</p>
+                </div>
+
+                <div class="finance-card">
+                    <h3 data-i18n="netProfit">Net Profit</h3>
+                    <h2 data-localize-numbers>₹16,500</h2>
+                    <p data-i18n="incomeAfterExpenses">Income after expenses</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-transactions">
+
+            <div class="section-heading">
+                <div>
+                    <h2 data-i18n="recentTransactions">Recent Transactions</h2>
+                    <p data-i18n="transactionDescription">Track your latest income and farming expenses.</p>
+                </div>
+            </div>
+
+            <div class="transaction-table-container">
+                <table class="transaction-table">
+                    <thead>
+                        <tr>
+                            <th data-i18n="transactionId">Transaction ID</th>
+                            <th data-i18n="date">Date</th>
+                            <th data-i18n="description">Description</th>
+                            <th data-i18n="type">Type</th>
+                            <th data-i18n="amount">Amount</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>#TR001</td>
+                            <td data-localize-numbers>13 <span data-i18n="november">Nov</span> 2026</td>
+                            <td data-i18n="tomatoSales">Tomato Sales</td>
+                            <td><span class="transaction-type income" data-i18n="income">Income</span></td>
+                            <td class="income-amount" data-localize-numbers>+ ₹5,000</td>
+                        </tr>
+                        <tr>
+                            <td>#TR002</td>
+                            <td data-localize-numbers>12 <span data-i18n="november">Nov</span> 2026</td>
+                            <td data-i18n="seedsPurchase">Seeds Purchase</td>
+                            <td><span class="transaction-type expense" data-i18n="expense">Expense</span></td>
+                            <td class="expense-amount" data-localize-numbers>- ₹1,500</td>
+                        </tr>
+                        <tr>
+                            <td>#TR003</td>
+                            <td data-localize-numbers>11 <span data-i18n="november">Nov</span> 2026</td>
+                            <td data-i18n="potatoSales">Potato Sales</td>
+                            <td><span class="transaction-type income" data-i18n="income">Income</span></td>
+                            <td class="income-amount" data-localize-numbers>+ ₹3,500</td>
+                        </tr>
+                        <tr>
+                            <td>#TR004</td>
+                            <td data-localize-numbers>10 <span data-i18n="november">Nov</span> 2026</td>
+                            <td data-i18n="fertilizerPurchase">Fertilizer Purchase</td>
+                            <td><span class="transaction-type expense" data-i18n="expense">Expense</span></td>
+                            <td class="expense-amount" data-localize-numbers>- ₹800</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="performance-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2 data-i18n="performance">Performance & Feedback</h2>
+                    <p data-i18n="performanceDescription">See how customers rate your products and service.</p>
+                </div>
+            </div>
+
+            <div class="performance-content">
+
+                <div class="rating-summary">
+                    <h3 data-i18n="overallRating">Overall Rating</h3>
+                    <h2 data-localize-numbers>4.8 <span>/ 5</span></h2>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <small data-i18n="reviewCount" data-localize-numbers>Based on 45 customer reviews</small>
+                </div>
+
+                <div class="feedback-summary">
+                    <h3 data-i18n="customerFeedback">Customer Feedback</h3>
+
+                    <div class="feedback-item">
+                        <p data-i18n="feedbackOne">"Fresh vegetables and excellent quality!"</p>
+                        <span data-i18n="customerReview">— Customer Review</span>
+                    </div>
+
+                    <div class="feedback-item">
+                        <p data-i18n="feedbackTwo">"Good packaging and timely delivery."</p>
+                        <span data-i18n="customerReview">— Customer Review</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<div id="farmer-voice-widget">
+
+    <button id="voice-toggle" type="button" title="Open Voice Assistant">
+        🎙️
+    </button>
+
+    <div id="voice-panel">
+
+        <div class="voice-header">
+            <h3>🌱 Farmer Voice Assistant</h3>
+            <button id="voice-close" type="button">×</button>
+        </div>
+
+        <p class="voice-description">
+            Speak a command and get help managing your farm.
+        </p>
+
+        <button id="voice-start" type="button">
+            🎤 Start Listening
+        </button>
+
+        <select id="voice-language" class="dashboard-language">
+            <option value="en-IN">English</option>
+            <option value="hi-IN">हिन्दी</option>
+            <option value="or-IN">ଓଡ଼ିଆ</option>
+        </select>
+
+        <div id="voice-status">Assistant is ready.</div>
+
+        <div id="voice-transcript">
+            Your spoken command will appear here.
+        </div>
+
+        <div id="voice-response">
+            Your assistant's response will appear here.
+        </div>
+
+    </div>
+</div>
+
+<script src="js/translations.js"></script>
+<script src="js/farmer_dashboard_translations.js"></script>
+<script src="js/farmer_dashboard.js"></script>
+<script src="js/voice-assistance.js"></script>
+
+</body>
+</html>

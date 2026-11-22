@@ -1,0 +1,1325 @@
+
+/* =========================================
+   KHET SE GHAR
+   PREMIUM FARMER DASHBOARD
+   PROFESSIONAL GLASS DESIGN
+========================================= */
+
+:root {
+    --sidebar: #17291f;
+    --sidebar-hover: #294535;
+
+    --primary: #43875b;
+    --primary-dark: #28613e;
+    --gold: #d2b477;
+
+    --white: #ffffff;
+    --text: #ffffff;
+    --muted: #e0e9e2;
+
+    --glass: rgba(255,255,255,0);
+    --glass-light: rgba(255,255,255,0);
+    --glass-border: rgba(255, 255, 255, 0.23);
+
+    --green: #70c58a;
+    --red: #ff9690;
+    --blue: #9ac7ec;
+    --orange: #f2c77e;
+
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.16);
+}
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 25px;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(13, 35, 21, 0.48),
+            rgba(13, 35, 21, 0.48)
+        ),
+        url('../images/farmer_dashboard.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    color: var(--white);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+a, button {
+    font-family: inherit;
+}
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.farmer-dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.farmer-sidebar {
+    width: 260px;
+    min-width: 260px;
+    min-height: 100vh;
+    height: 100vh;
+
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 27px 18px 20px;
+
+    background: var(--sidebar);
+    color: var(--white);
+
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.farmer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 4px 8px 27px;
+
+    font-size: 19px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+
+    color: var(--white);
+}
+
+.sidebar-label {
+    padding: 0 10px;
+    margin: 10px 0 14px;
+
+    color: #a4b7a9;
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: 1.5px;
+}
+
+.farmer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.farmer-nav a {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    padding: 12px 11px;
+
+    color: #c5d2c9;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 550;
+
+    border-radius: 5px;
+    border-left: 3px solid transparent;
+
+    transition: 0.2s ease;
+}
+
+.farmer-nav a:hover {
+    background: var(--sidebar-hover);
+    color: var(--white);
+}
+
+.farmer-nav a.active {
+    background: #2b4836;
+    color: var(--white);
+    border-left-color: var(--gold);
+}
+
+/* SIDEBAR BOTTOM */
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 25px;
+}
+
+.sidebar-support {
+    background: #22372a;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 7px;
+
+    padding: 17px 14px;
+    margin-bottom: 17px;
+}
+
+.sidebar-support > span {
+    font-size: 22px;
+}
+
+.sidebar-support h3 {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.sidebar-support p {
+    color: #c0cec3;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 7px;
+}
+
+.sidebar-support a {
+    display: inline-block;
+    margin-top: 12px;
+
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.sidebar-support a:hover {
+    color: var(--white);
+}
+
+.sidebar-home {
+    display: block;
+    padding: 10px 9px;
+
+    color: #c5d2c9;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+
+.sidebar-home:hover {
+    background: var(--sidebar-hover);
+    color: var(--white);
+}
+
+.sidebar-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    margin-top: 15px;
+    padding: 17px 9px 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    color: #b1c0b5;
+    font-size: 11px;
+}
+
+.sidebar-footer a {
+    color: #c8d9cd;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.sidebar-footer span {
+    margin-top: 3px;
+    color: #9bac9f;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.farmer-main {
+    flex: 1;
+    min-width: 0;
+    padding: 0 38px 35px;
+}
+
+/* HEADER */
+
+.farmer-header {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--glass-border);
+    margin-bottom: 20px;
+    flex-wrap: nowrap;
+}
+
+.farmer-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.farmer-welcome {
+    white-space: nowrap;
+}
+
+.farmer-header h1 {
+    color: var(--white);
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+}
+
+.farmer-header p {
+    margin-top: 6px;
+    color: #f0f4f0;
+    font-size: 13px;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.farmer-welcome {
+    padding: 11px 15px;
+
+    background: rgba(17, 39, 25, 0.48);
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 650;
+    white-space: nowrap;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* =========================================
+   GLASS PANEL BASE
+========================================= */
+
+.recent-orders,
+.quick-actions,
+.farmer-profile,
+.harvest-overview,
+.bulk-supply,
+.income-expenses,
+.recent-transactions,
+.performance-section,
+.stat-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+
+    box-shadow: var(--shadow);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* =========================================
+   WELCOME SECTION
+========================================= */
+
+.dashboard-welcome {
+    background: rgba(24, 61, 37, 0.42);
+    border: 1px solid var(--glass-border);
+    border-left: 4px solid var(--gold);
+
+    border-radius: 8px;
+    padding: 25px 27px;
+    margin-bottom: 26px;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: var(--shadow);
+}
+
+.dashboard-welcome h2 {
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 800;
+
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.55);
+}
+
+.dashboard-welcome p {
+    color: #eef4ef;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 8px;
+}
+
+/* =========================================
+   STATISTICS CARDS
+========================================= */
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 29px;
+}
+
+.stat-card {
+    min-height: 151px;
+    padding: 21px;
+
+    transition: 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    background: rgba(17, 39, 25, 0.52);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.stat-icon {
+    width: 41px;
+    height: 41px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.stat-icon svg {
+    width: 22px;
+    height: 22px;
+
+    fill: none;
+    stroke: var(--white);
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.stat-card h3 {
+    color: #e4ece5;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.stat-card h2 {
+    color: var(--white);
+    font-size: 29px;
+    font-weight: 800;
+    margin-top: 8px;
+    letter-spacing: -0.5px;
+}
+
+.stat-card p {
+    color: #d0ddd2;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* =========================================
+   COMMON SECTIONS
+========================================= */
+
+.recent-orders,
+.quick-actions,
+.farmer-profile,
+.harvest-overview,
+.bulk-supply,
+.income-expenses,
+.recent-transactions,
+.performance-section {
+    padding: 25px;
+    margin-bottom: 24px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    padding-bottom: 19px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.section-heading h2 {
+    color: var(--white);
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+}
+
+.section-heading p {
+    color: #e0e9e2;
+    font-size: 13px;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+.view-all {
+    color: #f0d59e;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.view-all:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* =========================================
+   TABLES
+========================================= */
+
+.orders-table-container,
+.bulk-table-container,
+.transaction-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.orders-table,
+.bulk-table,
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+.orders-table thead,
+.bulk-table thead,
+.transaction-table thead {
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.orders-table th,
+.bulk-table th,
+.transaction-table th {
+    padding: 14px 15px;
+    text-align: left;
+
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 750;
+    letter-spacing: 0.4px;
+
+    border-bottom: 1px solid var(--glass-border);
+    white-space: nowrap;
+}
+
+.orders-table td,
+.bulk-table td,
+.transaction-table td {
+    padding: 16px 15px;
+
+    color: #f0f4f0;
+    font-size: 13px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    white-space: nowrap;
+}
+
+.orders-table tbody tr:last-child td,
+.bulk-table tbody tr:last-child td,
+.transaction-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.orders-table tbody tr:hover,
+.bulk-table tbody tr:hover,
+.transaction-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.orders-table td:first-child,
+.bulk-table td:first-child,
+.transaction-table td:first-child {
+    color: var(--white);
+    font-weight: 700;
+}
+
+/* =========================================
+   STATUS LABELS
+========================================= */
+
+.order-status,
+.bulk-status,
+.transaction-type,
+.harvest-status {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.order-status.delivered,
+.bulk-status.completed,
+.harvest-status.ready,
+.transaction-type.income {
+    background: rgba(71, 169, 101, 0.23);
+    border: 1px solid rgba(115, 220, 145, 0.35);
+    color: #baf2c8;
+}
+
+.order-status.processing,
+.bulk-status.progress {
+    background: rgba(74, 143, 194, 0.23);
+    border: 1px solid rgba(145, 198, 235, 0.3);
+    color: #c4e5ff;
+}
+
+.order-status.pending,
+.bulk-status.open,
+.harvest-status.upcoming {
+    background: rgba(195, 145, 55, 0.23);
+    border: 1px solid rgba(238, 195, 111, 0.35);
+    color: #ffe1a7;
+}
+
+.transaction-type.expense {
+    background: rgba(196, 80, 75, 0.23);
+    border: 1px solid rgba(255, 150, 144, 0.3);
+    color: #ffc1bc;
+}
+
+/* =========================================
+   QUICK ACTIONS
+========================================= */
+
+.actions-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.action-card {
+    display: block;
+    padding: 20px 17px;
+
+    background: var(--glass-light);
+    border: 1px solid var(--glass-border);
+    border-radius: 7px;
+
+    text-decoration: none;
+    transition: 0.25s ease;
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.action-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.42);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.action-card > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 39px;
+    height: 39px;
+
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+
+    color: var(--white);
+    border-radius: 7px;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.action-card h3 {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 750;
+    margin-top: 16px;
+}
+
+.action-card p {
+    color: #e1eae2;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 7px;
+}
+
+/* =========================================
+   FARMER PROFILE
+========================================= */
+
+.profile-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    padding: 10px 3px;
+}
+
+.profile-avatar {
+    width: 67px;
+    height: 67px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+
+    font-size: 30px;
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 180px;
+}
+
+.profile-info h3 {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 750;
+    margin-bottom: 8px;
+}
+
+.profile-info p {
+    color: #e0e9e2;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.verification-status {
+    padding: 9px 13px;
+
+    background: rgba(71, 169, 101, 0.22);
+    border: 1px solid rgba(115, 220, 145, 0.35);
+    border-radius: 5px;
+
+    color: #c0f0cc;
+    font-size: 11px;
+    font-weight: 750;
+}
+
+/* =========================================
+   HARVEST OVERVIEW
+========================================= */
+
+.harvest-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.harvest-card {
+    padding: 20px;
+
+    background: var(--glass-light);
+    border: 1px solid var(--glass-border);
+    border-radius: 7px;
+
+    transition: 0.25s ease;
+}
+
+.harvest-card:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.38);
+}
+
+.harvest-card h3 {
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 750;
+}
+
+.harvest-quantity {
+    color: #b9edc7;
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 13px;
+}
+
+.harvest-card > p:not(.harvest-quantity) {
+    color: #e0e9e2;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+/* =========================================
+   INCOME & EXPENSES
+========================================= */
+
+.finance-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.finance-card {
+    padding: 22px;
+
+    background: var(--glass-light);
+    border: 1px solid var(--glass-border);
+    border-top: 3px solid var(--primary);
+    border-radius: 7px;
+}
+
+.finance-card:nth-child(2) {
+    border-top-color: #e58a83;
+}
+
+.finance-card:nth-child(3) {
+    border-top-color: var(--gold);
+}
+
+.finance-card h3 {
+    color: #e2eae3;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.finance-card h2 {
+    color: var(--white);
+    font-size: 28px;
+    font-weight: 800;
+    margin-top: 14px;
+}
+
+.finance-card p {
+    color: #d6e1d8;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.income-amount {
+    color: #b9edc7 !important;
+    font-weight: 800;
+}
+
+.expense-amount {
+    color: #ffb5ae !important;
+    font-weight: 800;
+}
+
+/* =========================================
+   PERFORMANCE & FEEDBACK
+========================================= */
+
+.performance-content {
+    display: grid;
+    grid-template-columns: 0.8fr 1.7fr;
+    gap: 20px;
+}
+
+.rating-summary {
+    padding: 23px;
+
+    background: var(--glass-light);
+    border: 1px solid var(--glass-border);
+    border-radius: 7px;
+
+    text-align: center;
+}
+
+.rating-summary h3,
+.feedback-summary h3 {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 750;
+}
+
+.rating-summary h2 {
+    color: var(--white);
+    font-size: 39px;
+    margin-top: 14px;
+}
+
+.rating-summary h2 span {
+    color: #e0e9e2;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.rating-summary > p {
+    font-size: 18px;
+    margin-top: 7px;
+}
+
+.rating-summary small {
+    display: block;
+    color: #dce6de;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.feedback-summary {
+    padding: 20px;
+
+    background: var(--glass-light);
+    border: 1px solid var(--glass-border);
+    border-radius: 7px;
+}
+
+.feedback-item {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.feedback-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.feedback-item p {
+    color: #f1f5f1;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.feedback-item span {
+    display: block;
+    color: #d0ddd2;
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .farmer-sidebar {
+        width: 225px;
+        min-width: 225px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .farmer-main {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .actions-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================================
+   RESPONSIVE - SMALL TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .farmer-dashboard {
+        display: block;
+    }
+
+    .farmer-sidebar {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: auto;
+
+        position: relative;
+        overflow: visible;
+
+        padding: 17px 20px;
+    }
+
+    .farmer-brand {
+        padding-bottom: 15px;
+    }
+
+    .sidebar-label {
+        display: none;
+    }
+
+    .farmer-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .farmer-nav a {
+        padding: 9px 10px;
+        font-size: 11px;
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .farmer-main {
+        padding: 0 23px 25px;
+    }
+
+    .harvest-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 550px) {
+
+    .farmer-sidebar {
+        padding: 15px;
+    }
+
+    .farmer-brand {
+        font-size: 17px;
+    }
+
+    .farmer-nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .farmer-nav a {
+        font-size: 10px;
+        padding: 10px 8px;
+    }
+
+    .farmer-main {
+        padding: 0 14px 20px;
+    }
+
+    .farmer-header {
+        min-height: 85px;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 9px;
+        padding: 15px 0;
+    }
+
+    .farmer-header h1 {
+        font-size: 22px;
+    }
+
+    .farmer-welcome {
+        font-size: 11px;
+        padding: 8px 11px;
+    }
+
+    .dashboard-welcome {
+        padding: 19px;
+    }
+
+    .dashboard-welcome h2 {
+        font-size: 18px;
+    }
+
+    .dashboard-welcome p {
+        font-size: 12px;
+    }
+
+    .stats-container {
+        gap: 10px;
+    }
+
+    .stat-card {
+        min-height: 135px;
+        padding: 15px;
+    }
+
+    .stat-card h2 {
+        font-size: 23px;
+    }
+
+    .stat-card h3 {
+        font-size: 10px;
+    }
+
+    .recent-orders,
+    .quick-actions,
+    .farmer-profile,
+    .harvest-overview,
+    .bulk-supply,
+    .income-expenses,
+    .recent-transactions,
+    .performance-section {
+        padding: 17px;
+        margin-bottom: 17px;
+    }
+
+    .section-heading h2 {
+        font-size: 16px;
+    }
+
+    .section-heading p {
+        font-size: 11px;
+    }
+
+    .actions-container {
+        gap: 10px;
+    }
+
+    .action-card {
+        padding: 15px 12px;
+    }
+
+    .action-card h3 {
+        font-size: 12px;
+    }
+
+    .action-card p {
+        font-size: 10px;
+    }
+
+    .profile-details {
+        gap: 13px;
+    }
+
+    .profile-avatar {
+        width: 53px;
+        height: 53px;
+        font-size: 24px;
+    }
+
+    .profile-info h3 {
+        font-size: 15px;
+    }
+
+    .profile-info p {
+        font-size: 11px;
+    }
+
+    .verification-status {
+        font-size: 10px;
+    }
+
+    .harvest-container,
+    .finance-container {
+        grid-template-columns: 1fr;
+    }
+
+    .performance-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .actions-container {
+        grid-template-columns: 1fr;
+    }
+
+    .farmer-nav a {
+        font-size: 9px;
+        gap: 6px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+
+    .view-all {
+        font-size: 10px;
+    }
+}
+
+
+/* =====================================
+   FARMER PRODUCTION REQUESTS
+===================================== */
+
+#farmer-production-requests {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.production-request-card {
+    background: #ffffff;
+    border: 1px solid #e5e9e5;
+    border-left: 4px solid #3b8f55;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.production-request-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.production-request-card h3 {
+    color: #243b2c;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.production-request-card p {
+    color: #59665d;
+    font-size: 14px;
+    margin: 11px 0;
+    line-height: 1.5;
+}
+
+.production-request-card p strong {
+    color: #26392d;
+}
+
+.request-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.request-status.pending {
+    background: #fff3d6;
+    color: #9a6900;
+}
+
+.request-status.accepted {
+    background: #e4f2ff;
+    color: #1765a0;
+}
+
+.request-status.rejected {
+    background: #fde8e8;
+    color: #b42318;
+}
+
+.request-status.preparing {
+    background: #eee9ff;
+    color: #6243a5;
+}
+
+.request-status.ready {
+    background: #e2f5e8;
+    color: #23733d;
+}
+
+.request-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.request-actions button {
+    border: none;
+    border-radius: 7px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.accept-request,
+.update-request {
+    background: #287a45;
+    color: #ffffff;
+}
+
+.accept-request:hover,
+.update-request:hover {
+    background: #1d6035;
+}
+
+.reject-request {
+    background: #fce9e9;
+    color: #b42318;
+}
+
+.reject-request:hover {
+    background: #f8d5d5;
+}
+
+@media (max-width: 600px) {
+    #farmer-production-requests {
+        grid-template-columns: 1fr;
+    }
+
+    .production-request-card {
+        padding: 17px;
+    }
+}
+ 
+
+/* Language selector visibility on smaller screens */
+@media (max-width: 800px) {
+
+    .farmer-sidebar .sidebar-bottom {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        padding-top: 12px;
+    }
+
+    .farmer-sidebar .sidebar-support,
+    .farmer-sidebar .sidebar-footer {
+        display: none;
+    }
+
+    #ksg-language-selector {
+        margin-left: 0 !important;
+    }
+
+}
+

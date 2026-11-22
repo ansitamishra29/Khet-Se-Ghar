@@ -1,0 +1,1474 @@
+
+/* =========================================
+   KHET SE GHAR
+   PROFESSIONAL BUSINESS DASHBOARD
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+.business-dashboard {
+    margin: 0;
+    background: #f4f5f3;
+    color: #252c28;
+    font-family: 'Inter', sans-serif;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+
+.business-sidebar {
+    width: 250px;
+    min-height: 100vh;
+    padding: 27px 17px 20px;
+    background: #17251d;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.business-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 10px;
+    margin-bottom: 52px;
+}
+
+.brand-icon {
+    width: 38px;
+    height: 38px;
+    background: #b9cead;
+    color: #17251d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.business-brand strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.business-brand small {
+    display: block;
+    margin-top: 5px;
+    color: #94a497;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.sidebar-label {
+    padding: 0 12px;
+    margin-bottom: 13px;
+    color: #829488;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.business-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.business-nav a,
+.sidebar-bottom a {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 12px 13px;
+    color: #b9c5bc;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: 0.2s ease;
+}
+
+.nav-icon {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.business-nav a:hover,
+.sidebar-bottom a:hover {
+    background: #263a2d;
+    color: #ffffff;
+}
+
+.business-nav a.active {
+    background: #304c38;
+    color: #ffffff;
+    border-left: 3px solid #a8c393;
+    padding-left: 10px;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #344239;
+}
+
+.logout-link {
+    color: #e1aaa0 !important;
+}
+
+.sidebar-footer {
+    margin-top: 25px;
+    padding: 14px 10px 0;
+    border-top: 1px solid #344239;
+}
+
+.sidebar-footer span {
+    display: block;
+    color: #a8b7aa;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.sidebar-footer small {
+    display: block;
+    margin-top: 6px;
+    color: #738579;
+    font-size: 9px;
+}
+
+/* MAIN */
+
+.business-main {
+    flex: 1;
+    min-width: 0;
+    padding: 34px 42px 25px;
+    max-width: 1800px;
+}
+
+/* HEADER */
+
+.business-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.breadcrumb {
+    color: #89948b;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    margin-bottom: 10px;
+}
+
+.business-header h1 {
+    color: #202c24;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0 0 7px;
+}
+
+.header-subtitle {
+    color: #89928b;
+    font-size: 12px;
+    margin: 0;
+}
+
+.business-account {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 9px 13px;
+    background: #ffffff;
+    border: 1px solid #e8ebe7;
+    border-radius: 8px;
+}
+
+.account-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e7eee5;
+    color: #31583b;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.account-details h4 {
+    margin: 0 0 4px;
+    color: #2c3930;
+    font-size: 11px;
+}
+
+.account-details p {
+    margin: 0;
+    color: #929b94;
+    font-size: 10px;
+}
+
+/* WELCOME */
+
+.business-welcome {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 190px;
+    padding: 30px 36px;
+    margin-bottom: 25px;
+    background: #213d2b;
+    color: #ffffff;
+    border-radius: 9px;
+}
+
+.welcome-tag {
+    color: #b5c9ac;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.business-welcome h2 {
+    max-width: 560px;
+    margin: 12px 0 10px;
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.business-welcome p {
+    max-width: 570px;
+    color: #d0dbd1;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.welcome-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 13px;
+    padding: 11px 16px;
+    background: #d9e5d3;
+    color: #213d2b;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.welcome-button:hover {
+    background: #ffffff;
+}
+
+.welcome-decoration {
+    position: absolute;
+    right: 65px;
+    width: 145px;
+    height: 145px;
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-decoration::before {
+    content: "";
+    position: absolute;
+    width: 112px;
+    height: 112px;
+    border: 1px solid rgba(255,255,255,0.13);
+    border-radius: 50%;
+}
+
+.welcome-decoration span {
+    color: rgba(255,255,255,0.22);
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+/* STATISTICS */
+
+.business-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 34px;
+}
+
+.stat-card {
+    padding: 19px 20px;
+    background: #ffffff;
+    border: 1px solid #e7eae6;
+    border-radius: 8px;
+}
+
+.stat-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    color: #78837b;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.stat-symbol {
+    color: #b1bdb1;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.stat-card h2 {
+    margin: 18px 0 5px;
+    color: #27372b;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.stat-card > p {
+    margin: 0;
+    color: #a0a8a1;
+    font-size: 10px;
+}
+
+/* COMMON SECTION */
+
+.business-section {
+    margin-bottom: 34px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    margin: 5px 0 6px;
+    color: #29372d;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.section-heading p {
+    margin: 0;
+    color: #929a93;
+    font-size: 11px;
+}
+
+.section-eyebrow {
+    color: #718c70;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* QUICK ACTIONS */
+
+.quick-action-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.quick-action-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 17px;
+    background: #ffffff;
+    border: 1px solid #e7eae6;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.quick-action-card:hover {
+    border-color: #a8bca6;
+    transform: translateY(-2px);
+}
+
+.action-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #edf2eb;
+    color: #466849;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.action-content h3 {
+    margin: 0 0 5px;
+    color: #354238;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.action-content p {
+    margin: 0;
+    color: #929a93;
+    font-size: 10px;
+}
+
+.action-arrow {
+    margin-left: auto;
+    color: #718a72;
+    font-size: 17px;
+}
+
+/* PRODUCT CATALOGUE */
+
+.business-products-section {
+    margin: 35px 0;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e7eae6;
+    border-radius: 8px;
+}
+
+.business-products-section .section-heading {
+    margin-bottom: 23px;
+}
+
+.catalogue-label {
+    padding: 7px 10px;
+    background: #edf3eb;
+    color: #50724f;
+    border-radius: 4px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.business-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+    gap: 15px;
+}
+
+.business-product-card {
+    padding: 19px;
+    background: #ffffff;
+    border: 1px solid #e7ebe6;
+    border-radius: 7px;
+    transition: 0.2s ease;
+}
+
+.business-product-card:hover {
+    border-color: #a9bca7;
+    box-shadow: 0 5px 15px rgba(30, 50, 35, 0.06);
+}
+
+.business-product-card h3 {
+    margin: 0 0 9px;
+    color: #2c3a30;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.business-product-card p {
+    margin: 0 0 8px;
+    color: #828d84;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.business-product-card p:nth-of-type(1) {
+    color: #6e866d;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.business-product-card p:nth-of-type(3) {
+    margin-top: 15px;
+    color: #315e3b;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.business-product-quantity {
+    width: 100%;
+    height: 38px;
+    margin: 10px 0;
+    padding: 0 10px;
+    background: #fafbf9;
+    border: 1px solid #e0e6df;
+    border-radius: 5px;
+    color: #344238;
+    font-family: inherit;
+    font-size: 12px;
+    outline: none;
+}
+
+.business-product-quantity:focus {
+    border-color: #658765;
+}
+
+.business-add-cart-btn {
+    width: 100%;
+    min-height: 39px;
+    background: #294d34;
+    color: #ffffff;
+    border: 1px solid #294d34;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.business-add-cart-btn:hover {
+    background: #1d3926;
+}
+
+/* ORDERS TABLE */
+
+.orders-table-wrapper {
+    overflow-x: auto;
+    background: #ffffff;
+    border: 1px solid #e7eae6;
+    border-radius: 8px;
+}
+
+.business-orders-table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+}
+
+.business-orders-table th {
+    padding: 15px 17px;
+    background: #f8f9f7;
+    color: #79847b;
+    text-align: left;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    border-bottom: 1px solid #e9ece8;
+}
+
+.business-orders-table td {
+    padding: 17px;
+    color: #647067;
+    font-size: 11px;
+    border-bottom: 1px solid #edf0ec;
+}
+
+.business-orders-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.empty-orders {
+    text-align: center;
+    padding: 30px !important;
+    color: #929b93 !important;
+}
+
+/* VIEW ALL */
+
+.view-all-link {
+    color: #486d4c;
+    font-size: 10px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* FOOTER */
+
+.business-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #e3e8e2;
+    color: #9aa39b;
+    font-size: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+    .business-main {
+        padding: 28px 24px;
+    }
+
+    .business-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .quick-action-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .business-sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 18px;
+    }
+
+    .business-brand {
+        margin-bottom: 25px;
+    }
+
+    .business-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .business-nav a {
+        flex: 1 1 40%;
+    }
+
+    .sidebar-bottom {
+        margin-top: 18px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .business-main {
+        padding: 22px 16px;
+    }
+
+    .business-header {
+        align-items: flex-start;
+    }
+
+    .business-header h1 {
+        font-size: 21px;
+    }
+
+    .business-welcome {
+        padding: 25px;
+    }
+
+    .business-welcome h2 {
+        font-size: 20px;
+    }
+
+    .welcome-decoration {
+        right: 25px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .welcome-decoration::before {
+        width: 78px;
+        height: 78px;
+    }
+
+    .welcome-decoration span {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 520px) {
+    .business-account {
+        display: none;
+    }
+
+    .business-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 14px;
+    }
+
+    .stat-card h2 {
+        font-size: 21px;
+    }
+
+    .welcome-decoration {
+        display: none;
+    }
+
+    .business-products-section {
+        padding: 17px;
+    }
+
+    .business-products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .business-footer {
+        flex-direction: column;
+    }
+}
+
+
+/* =====================================
+   PROFESSIONAL BUSINESS SIDEBAR NAV
+===================================== */
+
+.business-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 0 18px;
+    margin-top: 12px;
+}
+
+.business-nav .nav-heading {
+    color: #91a49a;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin: 12px 0 10px 8px;
+}
+
+.business-nav a {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 46px;
+    padding: 0 13px;
+    border-radius: 8px;
+    color: #c4d1c9;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.business-nav a:hover {
+    background: rgba(255, 255, 255, 0.07);
+    color: #ffffff;
+}
+
+.business-nav a.active {
+    background: #294b39;
+    color: #ffffff;
+    border-left-color: #8bc49c;
+    font-weight: 600;
+}
+
+.business-nav .nav-icon {
+    width: 27px;
+    height: 27px;
+    min-width: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.07);
+    color: #b8cfc0;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.business-nav a.active .nav-icon {
+    background: rgba(255, 255, 255, 0.13);
+    color: #ffffff;
+}
+
+.business-nav a:hover .nav-icon {
+    background: rgba(255, 255, 255, 0.13);
+    color: #ffffff;
+}
+
+
+/* =====================================
+   BUSINESS HEADER REDESIGN
+===================================== */
+
+.business-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 25px 32px;
+    background: #ffffff;
+    border: 1px solid #e8ede9;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.header-left .header-label {
+    display: inline-block;
+    color: #548365;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.header-left h1 {
+    color: #1d3025;
+    font-size: 27px;
+    font-weight: 700;
+    margin: 0 0 7px;
+}
+
+.header-left p {
+    color: #78847d;
+    font-size: 13px;
+    margin: 0;
+}
+
+.business-account {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 15px;
+    background: #f7f9f7;
+    border: 1px solid #e9eee9;
+    border-radius: 10px;
+}
+
+.account-avatar {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #244b36;
+    color: #ffffff;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.account-details h4 {
+    color: #24382c;
+    font-size: 13px;
+    font-weight: 650;
+    margin: 0 0 4px;
+}
+
+.account-details p {
+    color: #849087;
+    font-size: 11px;
+    margin: 0;
+}
+
+.account-status {
+    margin-left: 10px;
+    padding: 5px 9px;
+    background: #e8f3eb;
+    color: #36744b;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+@media (max-width: 650px) {
+    .business-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .business-account {
+        width: 100%;
+    }
+}
+
+
+
+
+/* DEEP NATURAL LEAF GREEN BACKGROUND */
+
+.business-dashboard,
+.business-main {
+    background: #a8c99b !important;
+}
+
+.business-brand .brand-icon {
+    background: #163d28 !important;
+    color: #ffffff !important;
+    border: 1px solid #315b40;
+}
+
+
+/* =====================================
+   BUSINESS SHOPPING CART
+===================================== */
+
+.business-cart-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 22px;
+    padding: 22px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #dce6d8;
+}
+
+.business-cart-summary h3 {
+    color: #244b31;
+    font-size: 19px;
+}
+
+.business-cart-summary h3 span {
+    color: #315f3c;
+}
+
+#business-checkout-btn {
+    padding: 12px 24px;
+    background: #244b31;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#business-checkout-btn:hover {
+    background: #163d28;
+}
+
+#business-checkout-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.cart-quantity-btn {
+    width: 29px;
+    height: 29px;
+    border: 1px solid #b8cbb8;
+    background: #edf4e9;
+    color: #244b31;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.cart-remove-btn {
+    padding: 7px 12px;
+    background: #fff0ed;
+    color: #b43b2e;
+    border: 1px solid #f0c7c0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cart-remove-btn:hover {
+    background: #ffe0da;
+}
+
+.business-orders-table td {
+    vertical-align: middle;
+}
+
+/* =====================================
+   BUSINESS PRODUCT QUANTITY CONTROL
+===================================== */
+
+.business-quantity-control {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 38px;
+    width: 125px;
+    padding: 4px 8px;
+    border: 1px solid #39764a;
+    border-radius: 6px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.business-quantity-control[hidden] {
+    display: none;
+}
+
+.business-quantity-control button {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    background: #39764a;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.business-quantity-control button:hover {
+    background: #285b38;
+}
+
+.business-quantity-value {
+    min-width: 18px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: #163d28;
+}
+
+/* =====================================
+   BIGBASKET-INSPIRED QUANTITY CONTROL
+===================================== */
+
+.business-quantity-control {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 112px;
+    height: 38px;
+    padding: 0 8px;
+
+    background: #ffffff;
+    border: 1.5px solid #398447;
+    border-radius: 7px;
+
+    box-sizing: border-box;
+    gap: 0;
+}
+
+.business-quantity-control[hidden] {
+    display: none;
+}
+
+.business-quantity-control button {
+    width: 28px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+
+    color: #398447;
+    font-size: 22px;
+    font-weight: 600;
+
+    cursor: pointer;
+    padding: 0;
+}
+
+.business-quantity-control button:hover {
+    background: #edf6ed;
+}
+
+.business-quantity-value {
+    min-width: 22px;
+    text-align: center;
+
+    color: #263b2b;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/* =====================================
+   BUSINESS PRODUCT CARDS - BIGBASKET STYLE
+===================================== */
+
+.business-product-card {
+    background: #ffffff;
+    border: 1px solid #e3e9e2;
+    border-radius: 12px;
+    padding: 14px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.business-product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(30, 65, 40, 0.10);
+}
+
+/* PRODUCT IMAGE */
+
+.business-product-image-wrapper {
+    width: 100%;
+    height: 165px;
+    background: #f5f8f3;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 13px;
+}
+
+.business-product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.business-image-fallback {
+    color: #7b897c;
+    font-size: 13px;
+}
+
+/* PRODUCT CATEGORY */
+
+.business-product-category {
+    color: #638368;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    margin-bottom: 5px;
+}
+
+/* PRODUCT NAME */
+
+.business-product-name {
+    color: #263b2b;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 7px;
+}
+
+/* DESCRIPTION */
+
+.business-product-description {
+    color: #778078;
+    font-size: 12px;
+    line-height: 1.5;
+    min-height: 18px;
+    margin-bottom: 10px;
+}
+
+/* PRICE */
+
+.business-product-card .product-price {
+    color: #245d32;
+    font-size: 19px;
+    font-weight: 750;
+    margin: 9px 0;
+}
+
+/* STOCK */
+
+.business-product-card .product-stock {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.business-product-card .product-stock.in-stock {
+    color: #398447;
+}
+
+.business-product-card .product-stock.out-of-stock {
+    color: #c0392b;
+    font-weight: 700;
+}
+
+/* SUPPLIER */
+
+.business-product-supplier {
+    color: #788278;
+    font-size: 11px;
+    margin: 9px 0 13px;
+}
+
+/* ADD BUTTON */
+
+.business-product-card .business-add-cart-btn {
+    width: 100%;
+    min-height: 39px;
+    border-radius: 7px;
+    background: #245d32;
+    color: #ffffff;
+    border: none;
+    font-size: 13px;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.business-product-card .business-add-cart-btn:hover {
+    background: #174825;
+}
+
+.business-product-card .business-add-cart-btn:disabled {
+    background: #a7b1a8;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   KHET SE GHAR - BULK PROCUREMENT
+   PROFESSIONAL BUSINESS INTERFACE
+========================================= */
+
+.bulk-procurement-section {
+    margin: 35px 0;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #dce7d9;
+    border-radius: 12px;
+}
+
+.bulk-procurement-section .section-heading {
+    margin-bottom: 25px;
+}
+
+.bulk-form-card,
+.bulk-list-card {
+    padding: 24px;
+    margin-bottom: 22px;
+    background: #fbfdfb;
+    border: 1px solid #e2eae0;
+    border-radius: 10px;
+}
+
+.bulk-card-heading {
+    margin-bottom: 22px;
+}
+
+.bulk-card-heading h3 {
+    margin: 0 0 7px;
+    color: #263d2c;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.bulk-card-heading p {
+    margin: 0;
+    color: #829087;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* FORM GRID */
+
+.bulk-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.bulk-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bulk-form-group label {
+    color: #405446;
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.bulk-form-group input,
+.bulk-form-group select {
+    width: 100%;
+    height: 43px;
+    padding: 0 13px;
+    background: #ffffff;
+    border: 1px solid #dce5db;
+    border-radius: 6px;
+    color: #344639;
+    font-family: inherit;
+    font-size: 12px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.bulk-form-group input:focus,
+.bulk-form-group select:focus {
+    border-color: #54845d;
+    box-shadow: 0 0 0 3px rgba(84, 132, 93, 0.09);
+}
+
+.bulk-form-group input::placeholder {
+    color: #aab4aa;
+}
+
+/* SUBMIT BUTTON */
+
+.bulk-submit-button {
+    min-height: 43px;
+    margin-top: 22px;
+    padding: 0 22px;
+    background: #285638;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.bulk-submit-button:hover {
+    background: #19442a;
+}
+
+/* FORM MESSAGE */
+
+.bulk-form-message {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* REQUIREMENT AND CONTRIBUTION LISTS */
+
+#business-bulk-orders,
+#business-bulk-contributions {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.bulk-order-item,
+.bulk-contribution-item {
+    padding: 19px;
+    background: #ffffff;
+    border: 1px solid #e5ebe3;
+    border-radius: 8px;
+    transition: border-color 0.2s ease;
+}
+
+.bulk-order-item:hover,
+.bulk-contribution-item:hover {
+    border-color: #a9c2a8;
+}
+
+.bulk-order-item h4,
+.bulk-contribution-item h4 {
+    margin: 0 0 10px;
+    color: #2b4331;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.bulk-order-item p,
+.bulk-contribution-item p {
+    margin: 7px 0;
+    color: #738076;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* STATUS LABELS */
+
+.bulk-status {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 8px;
+    border-radius: 20px;
+    background: #edf3eb;
+    color: #416b47;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+/* CONTRIBUTION ACTIONS */
+
+.bulk-contribution-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 14px;
+}
+
+.bulk-accept-btn,
+.bulk-reject-btn {
+    min-height: 34px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.bulk-accept-btn {
+    background: #e6f2e7;
+    color: #28613a;
+}
+
+.bulk-accept-btn:hover {
+    background: #d1e8d4;
+}
+
+.bulk-reject-btn {
+    background: #fff0ed;
+    color: #a83c32;
+}
+
+.bulk-reject-btn:hover {
+    background: #fbded8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+    .bulk-procurement-section {
+        padding: 17px;
+    }
+
+    .bulk-form-card,
+    .bulk-list-card {
+        padding: 17px;
+    }
+
+    .bulk-form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .bulk-submit-button {
+        width: 100%;
+    }
+}

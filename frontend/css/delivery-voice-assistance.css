@@ -1,0 +1,119 @@
+
+#delivery-voice-widget {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+}
+
+#delivery-voice-toggle {
+    background: #245c43;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 13px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+#delivery-voice-panel {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+    width: 310px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e2e8e4;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.16);
+}
+
+#delivery-voice-panel.open {
+    display: block;
+}
+
+#delivery-voice-panel .voice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+#delivery-voice-panel h3 {
+    margin: 0;
+    color: #245c43;
+    font-size: 17px;
+}
+
+#delivery-voice-close {
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+}
+
+#delivery-voice-panel label,
+#delivery-voice-panel p {
+    display: block;
+    margin: 12px 0 7px;
+    color: #374151;
+    font-size: 13px;
+}
+
+#delivery-voice-language {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: #fff;
+}
+
+#delivery-voice-start {
+    width: 100%;
+    margin-top: 14px;
+    padding: 11px;
+    border: none;
+    border-radius: 7px;
+    background: #245c43;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#delivery-voice-status,
+#delivery-voice-transcript,
+#delivery-voice-response {
+    padding: 10px;
+    border-radius: 7px;
+    background: #f3f7f4;
+    color: #374151;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+#delivery-voice-transcript,
+#delivery-voice-response {
+    min-height: 35px;
+}
+
+#delivery-voice-toggle:hover,
+#delivery-voice-start:hover {
+    background: #194832;
+}
+
+@media (max-width: 480px) {
+    #delivery-voice-widget {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    #delivery-voice-panel {
+        width: min(310px, calc(100vw - 40px));
+    }
+}

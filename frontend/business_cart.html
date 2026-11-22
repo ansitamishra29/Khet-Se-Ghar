@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart | Khet Se Ghar</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/business_cart.css">
+    
+</head>
+
+<body>
+
+    <header class="cart-header">
+        <h2>🌿 Khet Se Ghar</h2>
+        <a href="business_dashboard.html">← Back to Dashboard</a>
+    </header>
+
+    <main class="cart-container">
+
+        <div class="page-heading">
+            <h1>My Shopping Cart</h1>
+            <p>Review your selected farm products before placing your order.</p>
+        </div>
+
+        <div class="cart-layout">
+
+            <section class="cart-products">
+                <h2>Cart Items</h2>
+
+                <div id="cart-content"></div>
+            </section>
+
+            <aside class="order-summary">
+
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Total Items</span>
+                    <strong id="cart-item-count">0</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="cart-subtotal">₹0.00</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Delivery Charges</span>
+                    <strong>As applicable</strong>
+                </div>
+
+                <div class="summary-row summary-total">
+                    <span>Total Amount</span>
+                    <strong id="cart-grand-total">₹0.00</strong>
+                </div>
+
+                <div class="payment-info">
+                    <strong>Payment Method: Cash on Delivery</strong>
+                    <p>Pay when your order is delivered.</p>
+                </div>
+
+                <button
+                    type="button"
+                    id="business-checkout-btn"
+                    class="checkout-btn"
+                    disabled
+                >
+                    Proceed to Checkout
+                </button>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+   <script src="js/business_cart.js"></script>
+
+</body>
+</html>

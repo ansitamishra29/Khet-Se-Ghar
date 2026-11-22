@@ -1,0 +1,607 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8faf6;
+    color: #243326;
+}
+
+/* Navigation Bar */
+header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e6ebdf;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #263d2b;
+}
+
+.logo-icon {
+    font-size: 30px;
+}
+
+.logo-name {
+    color: #416b36;
+}
+
+.logo span {
+    color: #5b8c43;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #465448;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #5b8c43;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.login-btn {
+    text-decoration: none;
+    color: #416b36;
+    font-weight: 600;
+}
+
+.signup-btn {
+    text-decoration: none;
+    background-color: #416b36;
+    color: white;
+    padding: 11px 22px;
+    border-radius: 7px;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    background:
+        linear-gradient(90deg, rgba(20, 39, 24, 0.88), rgba(20, 39, 24, 0.25)),
+        url('../images/farm_banner2.jpg');
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content > p:first-child {
+    color: #c6e6a5;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.explore-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #83a95e;
+    color: white;
+    padding: 14px 27px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+.explore-btn:hover,
+.signup-btn:hover {
+    background-color: #31552d;
+}
+
+/* Common Section Styling */
+.products-section,
+.how-section,
+.about-section {
+    padding: 85px 8%;
+    text-align: center;
+    background-color: #f0f4e9;
+}
+
+/* Individual Section Backgrounds */
+.products-section {
+    background-color: #edf2e5;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(65, 107, 54, 0.18) 0 3px, transparent 4px),
+        radial-gradient(circle at 90% 80%, rgba(65, 107, 54, 0.18) 0 3px, transparent 4px),
+        radial-gradient(circle at 50% 50%, rgba(65, 107, 54, 0.10) 0 2px, transparent 3px);
+    background-size: 55px 55px, 65px 65px, 40px 40px;
+}
+
+.how-section {
+    background-color: #e5eddf;
+    background-image:
+        radial-gradient(ellipse at 15% 25%, rgba(65, 107, 54, 0.15) 0 3px, transparent 4px),
+        radial-gradient(ellipse at 85% 75%, rgba(65, 107, 54, 0.15) 0 3px, transparent 4px),
+        linear-gradient(135deg, transparent 48%, rgba(91, 140, 67, 0.06) 49%, transparent 51%);
+    background-size: 70px 70px, 70px 70px, 90px 90px;
+}
+
+.about-section {
+    background-color: #e8eddf;
+    background-image:
+        radial-gradient(circle at 15% 20%, rgba(65, 107, 54, 0.13) 0 3px, transparent 4px),
+        radial-gradient(circle at 85% 80%, rgba(65, 107, 54, 0.13) 0 3px, transparent 4px),
+        linear-gradient(45deg, transparent 47%, rgba(91, 140, 67, 0.07) 49%, transparent 51%);
+    background-size: 65px 65px, 65px 65px, 100px 100px;
+}
+/* Section Headings */
+.products-section h2,
+.how-section h2,
+.about-section h2 {
+    font-size: 32px;
+    color: #29462e;
+    margin-bottom: 15px;
+}
+
+.products-section > p,
+.about-section > p {
+    color: #69776b;
+    font-size: 16px;
+}
+
+/* Product Cards */
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 45px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 30px 25px;
+    border: 1px solid #e1e9dc;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(35, 65, 40, 0.06);
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(35, 65, 40, 0.12);
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-card h3 {
+    color: #29462e;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.product-card p {
+    color: #69776b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* How It Works Section */
+.section-subtitle {
+    color: #69776b;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 45px;
+    flex-wrap: wrap;
+}
+
+.step-card {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 30px 25px;
+    border: 1px solid #e1e9dc;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(35, 65, 40, 0.06);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8f1e2;
+    color: #416b36;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.step-card h3 {
+    color: #29462e;
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.step-card p {
+    color: #69776b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* About Us Section */
+.about-content {
+    max-width: 950px;
+    margin: auto;
+}
+
+.about-label {
+    color: #5b8c43;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.about-description {
+    max-width: 750px;
+    margin: 20px auto 35px;
+    color: #69776b;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.about-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.about-highlights div {
+    flex: 1;
+    min-width: 200px;
+    background: #ffffff;
+    padding: 25px;
+    border: 1px solid #e1e9dc;
+    border-radius: 12px;
+}
+
+.about-highlights h3 {
+    color: #29462e;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.about-highlights p {
+    color: #69776b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Footer Styling */
+.main-footer {
+    background-color: #203b28;
+    color: #ffffff;
+    padding: 50px 8% 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.footer-brand h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    color: #d0ddce;
+    font-size: 14px;
+}
+
+.footer-tagline {
+    margin-top: 15px;
+    color: #a8d58a !important;
+    font-size: 13px !important;
+    font-style: italic;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links h3 {
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+.footer-links a {
+    color: #d0ddce;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #a8d58a;
+}
+
+.footer-bottom {
+    border-top: 1px solid #49634d;
+    padding-top: 20px;
+    text-align: center;
+    color: #d0ddce;
+    font-size: 13px;
+}
+
+/* Login and Signup Pages */
+.auth-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    background:
+        linear-gradient(
+            rgba(24, 48, 29, 0.65),
+            rgba(24, 48, 29, 0.65)
+        ),
+        url('../images/farm_banner2.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 430px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 40px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    position:relative;
+}
+
+#auth-language {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    width: auto !important;
+    margin: 0 !important;
+    z-index: 9999;
+}
+
+.auth-logo {
+    text-align: center;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.auth-card h2 {
+    color: #ffffff;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.auth-subtitle {
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-card label {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.auth-card input {
+    background: rgba(255, 255, 255, 0.85);
+    color: #29462e;
+    padding: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 7px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    outline: none;
+}
+
+.auth-card input:focus {
+    border-color: #a8d58a;
+    box-shadow: 0 0 5px rgba(168, 213, 138, 0.6);
+}
+
+.auth-card input:focus {
+    border-color: #5b8c43;
+}
+
+.auth-btn {
+    background: #29462e;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.auth-btn:hover {
+    background: #1d3522;
+}
+
+.auth-switch {
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.auth-switch a,
+.back-home {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-home {
+    display: block;
+    text-align: center;
+    margin-top: 22px;
+    font-size: 14px;
+}
+
+.auth-card select {
+    background: rgba(255, 255, 255, 0.85);
+    color: #29462e;
+    padding: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 7px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.auth-card select:focus {
+    border-color: #a8d58a;
+    box-shadow: 0 0 5px rgba(168, 213, 138, 0.6);
+}
+
+.auth-card textarea {
+    background: rgba(255, 255, 255, 0.85);
+    color: #29462e;
+    padding: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 7px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    resize: vertical;
+}
+
+.auth-card textarea:focus {
+    border-color: #a8d58a;
+    box-shadow: 0 0 5px rgba(168, 213, 138, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

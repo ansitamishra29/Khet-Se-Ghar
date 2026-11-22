@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Operations | Khet Se Ghar</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/delivery_dashboard.css">
+    <link rel="stylesheet" href="css/delivery-voice-assistance.css">
+</head>
+
+<body>
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-icon">K</div>
+            <div>
+                <h2>Khet Se Ghar</h2>
+                <span>AGRICULTURAL MARKETPLACE</span>
+            </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+       <p class="sidebar-label" data-i18n="deliveryWorkspace">WORKSPACE</p>
+
+        <nav class="sidebar-nav">
+    <a href="#overview" class="nav-link active">▦ &nbsp; <span data-i18n="deliveryDashboard">Dashboard</span></a>
+    <a href="#available" class="nav-link">▤ &nbsp; <span data-i18n="deliveryAvailable">Available Deliveries</span></a>
+    <a href="#my-deliveries" class="nav-link">▣ &nbsp; <span data-i18n="deliveryMyDeliveries">My Deliveries</span></a>
+</nav>
+
+        <div class="sidebar-bottom">
+            <div class="sidebar-info">
+                <span class="online-indicator"></span>
+                <div>
+                   <strong data-i18n="deliveryPortal">Delivery Portal</strong>
+<small data-i18n="deliveryOperations">Delivery operations</small>
+                </div>
+            </div>
+            <div class="sidebar-divider"></div>
+            <p class="sidebar-copyright">© 2026 Khet Se Ghar</p>
+        </div>
+    </aside>
+
+    <div class="main-area">
+       <header class="topbar">
+    <div class="breadcrumb">
+        <span data-i18n="deliveryWorkspace">Workspace</span>
+        <span>/</span>
+        <strong data-i18n="deliveryBreadcrumb">Delivery Dashboard</strong>
+    </div>
+
+    <div class="topbar-actions">
+        <span class="account-role">
+            <span class="role-dot"></span>
+            <span data-i18n="deliveryRole">Delivery Boy</span>
+        </span>
+
+        <button id="logout-btn" class="logout-btn">
+            <span data-i18n="deliveryLogout">Logout</span> ↗
+        </button>
+    </div>
+</header>
+
+        <main class="dashboard-content">
+
+            <section class="welcome-section" id="overview">
+                <div>
+                    <p class="eyebrow" data-i18n="deliveryEyebrow">DELIVERY WORKSPACE</p>
+<h1 data-i18n="deliveryTitle">Delivery Dashboard</h1>
+<p class="welcome-description" data-i18n="deliveryDescription">
+    Manage your delivery assignments and track order progress.
+</p>
+                </div>
+                <div class="welcome-tag">
+                    <span class="online-indicator"></span>
+                   <span id="availability-label" data-i18n="deliveryChecking">Checking availability...</span>
+                </div>
+            </section>
+
+            <section class="profile-panel">
+    <div>
+        <p class="eyebrow" data-i18n="deliveryAccount">YOUR ACCOUNT</p>
+        <h2 id="delivery-name">Delivery Partner</h2>
+        <p id="vehicle-number" data-i18n="deliveryVehicle">Vehicle: Not provided</p>
+    </div>
+
+    <div class="availability-control">
+        <label for="availability-select" data-i18n="deliveryAvailability">Availability</label>
+        <select id="availability-select">
+            <option value="available" data-i18n="deliveryAvailableOption">Available</option>
+            <option value="inactive" data-i18n="deliveryInactive">Inactive</option>
+        </select>
+    </div>
+</section>
+
+            <section class="stats-container">
+                <div class="stat-card">
+    <span class="stat-label" data-i18n="deliveryAvailableOrders">AVAILABLE ORDERS</span>
+    <p id="available-count" class="stat-number">0</p>
+    <span class="stat-caption" data-i18n="deliveryReady">Ready to be accepted</span>
+</div>
+
+<div class="stat-card">
+    <span class="stat-label" data-i18n="deliveryMyDeliveriesStat">MY DELIVERIES</span>
+    <p id="my-delivery-count" class="stat-number">0</p>
+    <span class="stat-caption" data-i18n="deliveryAssigned">Assigned to you</span>
+</div>
+
+<div class="stat-card">
+    <span class="stat-label" data-i18n="deliveryCompleted">COMPLETED</span>
+    <p id="completed-count" class="stat-number">0</p>
+    <span class="stat-caption" data-i18n="deliverySuccessfully">Successfully delivered</span>
+</div>
+            </section>
+
+            <section class="orders-section" id="available">
+            <div class="section-heading">
+    <div>
+        <p class="eyebrow" data-i18n="deliveryPickAssignment">PICK YOUR ASSIGNMENT</p>
+        <h2 data-i18n="deliveryAvailable">Available Deliveries</h2>
+        <p class="section-description" data-i18n="deliveryBrowse">
+            Browse shipped orders and accept a delivery when you are available.
+        </p>
+    </div>
+    <button id="refresh-available" class="refresh-btn">↻ <span data-i18n="deliveryRefresh">Refresh</span></button>
+</div>
+
+<div class="orders-content" id="available-list">
+    <div class="loading-message" data-i18n="deliveryLoadingAvailable">Loading available deliveries...</div>
+</div>
+            </section>
+
+            <section class="orders-section" id="my-deliveries">
+                <div class="section-heading">
+    <div>
+        <p class="eyebrow" data-i18n="deliveryYourAssignments">YOUR ASSIGNMENTS</p>
+        <h2 data-i18n="deliveryMyDeliveries">My Deliveries</h2>
+        <p class="section-description" data-i18n="deliveryUpdateStatus">
+            Update the status of your accepted deliveries.
+        </p>
+    </div>
+    <button id="refresh-mine" class="refresh-btn">↻ <span data-i18n="deliveryRefresh">Refresh</span></button>
+</div>
+
+<div class="orders-content" id="my-deliveries-list">
+    <div class="loading-message" data-i18n="deliveryLoadingMine">Loading your deliveries...</div>
+</div>
+            </section>
+
+            <footer class="partner-footer">
+    <span>© 2026 Khet Se Ghar</span>
+    <span data-i18n="deliveryTagline">Connecting Farms to Homes.</span>
+</footer>
+
+        </main>
+    </div>
+</div>
+
+<!-- Delivery Voice Assistant -->
+<div id="delivery-voice-widget">
+
+    <button id="delivery-voice-toggle">🎙️ Voice Assistant</button>
+
+    <div id="delivery-voice-panel">
+
+        <div class="voice-header">
+            <h3>Delivery Voice Assistant</h3>
+            <button id="delivery-voice-close">×</button>
+        </div>
+
+        <label for="delivery-voice-language">Choose Language</label>
+
+        <select id="delivery-voice-language">
+            <option value="en-IN">English</option>
+            <option value="hi-IN">हिन्दी</option>
+            <option value="or-IN">ଓଡ଼ିଆ</option>
+        </select>
+
+        <button id="delivery-voice-start">🎤 Start Listening</button>
+
+        <p id="delivery-voice-status">Your assistant is ready.</p>
+
+        <p><strong>Your spoken command:</strong></p>
+        <div id="delivery-voice-transcript">
+            Your spoken command will appear here.
+        </div>
+
+        <p><strong>Assistant response:</strong></p>
+        <div id="delivery-voice-response">
+            Hello! How can I help you?
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/translations.js"></script>
+<script src="js/delivery_dashboard.js"></script>
+<script src="js/delivery-voice-assistance.js"></script>
+</html>

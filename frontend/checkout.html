@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Khet Se Ghar</title>
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+
+    <header class="checkout-header">
+        <a href="customer_dashboard.html" class="logo">
+            🌾 Khet Se Ghar
+        </a>
+        <a href="cart.html" class="back-link">← Back to Cart</a>
+    </header>
+
+    <main class="checkout-container">
+
+        <h1>Complete Your Order</h1>
+        <p class="subtitle">Just a few more steps to get fresh products delivered!</p>
+
+        <div class="checkout-layout">
+
+            <section class="checkout-form-section">
+                <h2>Delivery Details</h2>
+
+                <form id="checkout-form">
+
+                    <label for="customer-name">Full Name</label>
+                    <input type="text" id="customer-name"
+                           name="customer_name" required>
+
+                    <label for="customer-phone">Phone Number</label>
+                    <input type="tel" id="customer-phone"
+                           name="phone" maxlength="15" required>
+
+                   <label for="delivery-address">Delivery Address</label>
+                         <textarea id="delivery-address"
+                                name="address" rows="4" required></textarea>
+
+                   <label for="delivery-area">Delivery Area</label>
+                      <select id="delivery-area" name="delivery_area" required>
+                            <option value="">Select your area</option>
+                            <option value="Mangalabag">Mangalabag</option>
+                            <option value="Badambadi">Badambadi</option>
+                            <option value="College Square">College Square</option>
+                            <option value="CDA">CDA</option>
+                      </select>
+
+                    <h2>Payment Method</h2>
+
+                    <label class="payment-option">
+                        <input type="radio" name="payment_method"
+                               value="Cash on Delivery" checked>
+                        Cash on Delivery
+                    </label>
+
+                    <button type="submit" id="place-order-btn">
+                        Place Order
+                    </button>
+
+                    <p id="checkout-message"></p>
+
+                </form>
+            </section>
+
+            <section class="order-summary">
+                <h2>Order Summary</h2>
+
+                <div id="checkout-items"></div>
+
+                <div class="summary-total">
+                    <span>Total Amount</span>
+                    <strong id="checkout-total">₹0.00</strong>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="checkout-footer">
+        <p>© 2026 Khet Se Ghar. All rights reserved.</p>
+        <p>Connecting Farms to Homes.</p>
+    </footer>
+
+    <script src="js/checkout.js"></script>
+
+</body>
+</html>

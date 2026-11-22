@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Cart | Khet Se Ghar</title>
+
+    <link rel="stylesheet" href="css/customer_dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+
+<header class="customer-header">
+
+    <div class="header-container">
+
+        <a href="customer_dashboard.html" class="customer-logo">
+            🌾 <span>Khet Se Ghar</span>
+        </a>
+
+        <nav class="customer-nav">
+            <a href="customer_dashboard.html#shop">Continue Shopping</a>
+            <a href="cart.html">My Cart</a>
+            <a href="/logout" class="logout-link">Logout</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main class="cart-page">
+
+    <div class="cart-page-heading">
+        <h1>My Shopping Cart 🛒</h1>
+        <p>Review your fresh farm products before checkout.</p>
+    </div>
+
+    <div id="cart-items">
+        <p class="empty-cart-message">Your cart is empty.</p>
+    </div>
+
+    <div class="cart-summary">
+
+        <h3>
+            Grand Total:
+            <span id="cart-total">₹0</span>
+        </h3>
+
+        <button type="button" id="checkout-btn">
+            Proceed to Checkout →
+        </button>
+
+    </div>
+
+</main>
+
+
+<footer class="customer-footer">
+
+    <h3>🌾 Khet Se Ghar</h3>
+
+    <p>Connecting local farms to your home.</p>
+
+</footer>
+
+
+<script src="js/customer_dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Khet Se Ghar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:,">
+</head>
+<body> 
+
+    <div id="auth-language"></div>
+    <section class="auth-section">
+
+        <div class="auth-card">
+
+            <div class="auth-logo">
+                🌿 Khet Se Ghar
+            </div>
+
+            <h2 data-i18n="signupTitle">Create Your Account</h2>
+
+            <p class="auth-subtitle" data-i18n="signupSubtitle">
+    Join Khet Se Ghar and get started.
+</p>
+
+            <form action="/signup" method="POST">
+
+                <label for="fullname" data-i18n="signupFullName">Full Name</label>
+
+<input type="text" id="fullname"
+       name="fullname"
+       placeholder="Enter your full name"
+       data-i18n-placeholder="signupFullNamePlaceholder"
+       required>
+
+                <label for="email" data-i18n="signupEmail">Email Address</label>
+
+<input type="email" id="email"
+       name="email"
+       placeholder="Enter your email"
+       data-i18n-placeholder="signupEmailPlaceholder"
+       required>
+
+                <label for="role" data-i18n="signupAccountType">Account Type</label>
+
+               <select id="role" name="role" required>
+    <option value="" data-i18n="signupSelectAccount">Select your account type</option>
+    <option value="customer" data-i18n="signupCustomer">Customer</option>
+    <option value="farmer" data-i18n="signupFarmer">Farmer</option>
+    <option value="local_partner" data-i18n="signupLocalPartner">Local Partner</option>
+    <option value="delivery_boy" data-i18n="signupDeliveryBoy">Delivery Boy</option>
+    <option value="business" data-i18n="signupBusiness">Business</option>
+   
+</select>
+
+               <!-- LOCAL PARTNER SERVICE AREA -->
+<div id="partner-area-group" style="display: none;">
+
+    <label for="service-area" data-i18n="signupServiceArea">Service Area</label>
+
+    <select id="service-area" name="service_area">
+        <option value="" data-i18n="signupSelectArea">Select the area you will serve</option>
+        <option value="Mangalabag" data-i18n="areaMangalabag">Mangalabag</option>
+        <option value="Badambadi" data-i18n="areaBadambadi">Badambadi</option>
+        <option value="College Square" data-i18n="areaCollegeSquare">College Square</option>
+        <option value="CDA" data-i18n="areaCDA">CDA</option>
+    </select>
+
+</div>
+
+                <!-- BUSINESS DETAILS -->
+                <div id="business-details-group" style="display: none;">
+
+                  <label for="business-name" data-i18n="signupBusinessName">Business Name</label>
+
+<input type="text"
+       id="business-name"
+       name="business_name"
+       placeholder="Enter your business name"
+       data-i18n-placeholder="signupBusinessNamePlaceholder"> 
+
+                    <label for="business-type" data-i18n="signupBusinessCategory">Business Category</label>
+
+                    <select id="business-type" name="business_type">
+    <option value="" data-i18n="signupSelectCategory">Select business category</option>
+    <option value="hotel" data-i18n="categoryHotel">Hotel</option>
+    <option value="restaurant" data-i18n="categoryRestaurant">Restaurant</option>
+    <option value="wholesaler" data-i18n="categoryWholesaler">Wholesaler</option>
+    <option value="retailer" data-i18n="categoryRetailer">Retailer</option>
+</select>
+
+                   <label for="gst-number" data-i18n="signupGST">GST Number (Optional)</label>
+                    <input type="text"
+                            id="gst-number"
+                            name="gst_number"
+                            placeholder="Enter GST number"
+                            data-i18n-placeholder="signupGSTPlaceholder">
+
+                </div>
+
+              <label for="phone" data-i18n="signupPhone">Phone Number</label>
+                <input type="tel" id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        data-i18n-placeholder="signupPhonePlaceholder"
+                        required>
+
+
+                <label for="address" id="address-label" data-i18n="signupAddress">Address</label>
+                <textarea id="address"
+                        name="address"
+                        placeholder="Enter your complete address"
+                        data-i18n-placeholder="signupAddressPlaceholder"
+                        rows="3"
+                        required></textarea>
+
+                <label for="password" data-i18n="signupPassword">Password</label>
+
+                    <input type="password" id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        data-i18n-placeholder="signupPasswordPlaceholder"
+                        minlength="8"
+                        required>
+                <label for="confirm-password" data-i18n="signupConfirmPassword">Confirm Password</label>
+
+                        <input type="password" id="confirm-password"
+                            name="confirm_password"
+                            placeholder="Confirm your password"
+                            data-i18n-placeholder="signupConfirmPasswordPlaceholder"
+                            required>
+
+                <button type="submit" class="auth-btn" data-i18n="signupCreateAccount">
+                            Create Account
+                        </button>
+            </form>
+
+                    <p class="auth-switch">
+            <span data-i18n="signupHaveAccount">Already have an account?</span>
+            <a href="login.html" data-i18n="signupLogin">Login</a>
+        </p>
+
+           <a href="index.html" class="back-home" data-i18n="signupBackHome">
+                    ← Back to Home
+                </a>
+
+        </div>
+
+    </section>
+
+    <script src="js/translations.js"></script>
+    <script src="javascript/signup.js"></script>
+
+    <script>
+        const roleSelect = document.getElementById("role");
+
+        const partnerAreaGroup =
+            document.getElementById("partner-area-group");
+
+        const serviceAreaSelect =
+            document.getElementById("service-area");
+
+        const businessDetailsGroup =
+            document.getElementById("business-details-group");
+
+        const businessName =
+            document.getElementById("business-name");
+
+        const businessType =
+            document.getElementById("business-type");
+
+        const addressLabel =
+            document.getElementById("address-label");
+
+        function updateRegistrationFields() {
+
+            const role = roleSelect.value;
+
+            // LOCAL PARTNER
+            const isPartner = role === "local_partner";
+
+            partnerAreaGroup.style.display =
+                isPartner ? "block" : "none";
+
+            serviceAreaSelect.required = isPartner;
+
+            if (!isPartner) {
+                serviceAreaSelect.value = "";
+            }
+
+            // BUSINESS
+            const isBusiness = role === "business";
+
+            businessDetailsGroup.style.display =
+                isBusiness ? "block" : "none";
+
+            businessName.required = isBusiness;
+            businessType.required = isBusiness;
+
+            if (!isBusiness) {
+                businessName.value = "";
+                businessType.value = "";
+                document.getElementById("gst-number").value = "";
+            }
+
+            // ADDRESS LABEL
+            const addressKey = isBusiness
+    ? "signupBusinessAddress"
+    : "signupAddress";
+
+addressLabel.setAttribute("data-i18n", addressKey);
+
+const currentLanguage = localStorage.getItem("ksg_language") || "en";
+
+addressLabel.textContent =
+    translations[currentLanguage][addressKey] ||
+    translations.en[addressKey];
+
+document.getElementById("address").placeholder =
+    isBusiness
+        ? "Enter your complete business address"
+        : "Enter your complete address";
+        }
+
+    </script>
+
+</body>
+</html>

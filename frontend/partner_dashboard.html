@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Partner Operations | Khet Se Ghar</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/partner_dashboard.css">
+    <link rel="stylesheet" href="css/partner-voice-assistance.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+            <div class="brand-icon">K</div>
+            <div>
+                <h2>Khet Se Ghar</h2>
+                <span>AGRICULTURAL MARKETPLACE</span>
+            </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <p class="sidebar-label">WORKSPACE</p>
+
+        <nav class="sidebar-nav">
+            <a href="#overview" class="nav-link active">
+                <span class="nav-symbol">▦</span>
+                <span data-i18n="dashboard">Dashboard</span>
+            </a>
+
+            <a href="#orders" class="nav-link">
+                <span class="nav-symbol">▤</span>
+                <span data-i18n="customerOrders">Customer Orders</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="sidebar-info">
+                <span class="online-indicator"></span>
+                <div>
+                    <strong data-i18n="partnerPortal">Partner Portal</strong>
+                    <small data-i18n="operationsAccount">Operations account</small>
+                </div>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <p class="sidebar-copyright">
+                © 2026 Khet Se Ghar
+            </p>
+        </div>
+
+    </aside>
+
+    <div class="main-area">
+
+        <header class="topbar">
+
+            <div class="breadcrumb">
+                <span data-i18n="workspace">Workspace</span>
+                <span class="breadcrumb-separator">/</span>
+                <strong data-i18n="dashboard">Dashboard</strong>
+            </div>
+
+            <div class="topbar-actions">
+                <span class="account-role">
+                    <span class="role-dot"></span>
+                    <span data-i18n="localPartner">Local Partner</span>
+                </span>
+
+                <button id="logout-btn" class="logout-btn">
+                    <span data-i18n="logout">Logout</span>
+                    <span>↗</span>
+                </button>
+            </div>
+
+        </header>
+
+        <main class="dashboard-content">
+
+            <section class="welcome-section" id="overview">
+
+                <div>
+                    <p class="eyebrow" data-i18n="partnerWorkspace">PARTNER WORKSPACE</p>
+
+                    <h1 data-i18n="dashboardOverview">Dashboard Overview</h1>
+
+                    <p class="welcome-description" data-i18n="monitorOrders">
+                        Monitor customer orders and manage your delivery operations.
+                    </p>
+                </div>
+
+                <div class="welcome-tag">
+                    <span class="online-indicator"></span>
+                    <span data-i18n="operationsActive">Operations Active</span>
+                </div>
+
+            </section>
+
+            <section class="stats-container">
+
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-label" data-i18n="totalOrders">TOTAL ORDERS</span>
+                        <span class="stat-symbol">01</span>
+                    </div>
+                    <p id="total-orders" class="stat-number">0</p>
+                    <span class="stat-caption" data-i18n="ordersAssigned">Orders assigned to you</span>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-label" data-i18n="pendingOrders">PENDING ORDERS</span>
+                        <span class="stat-symbol pending-symbol">02</span>
+                    </div>
+                    <p id="pending-orders" class="stat-number">0</p>
+                    <span class="stat-caption" data-i18n="awaitingConfirmation">Awaiting confirmation</span>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-label" data-i18n="shippedOrders">SHIPPED ORDERS</span>
+                        <span class="stat-symbol shipped-symbol">03</span>
+                    </div>
+                    <p id="shipped-orders" class="stat-number">0</p>
+                    <span class="stat-caption" data-i18n="dispatchedDelivery">Dispatched for delivery</span>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-label" data-i18n="deliveredOrders">DELIVERED ORDERS</span>
+                        <span class="stat-symbol delivered-symbol">04</span>
+                    </div>
+                    <p id="delivered-orders" class="stat-number">0</p>
+                    <span class="stat-caption" data-i18n="successfullyCompleted">Successfully completed</span>
+                </div>
+
+            </section>
+
+            <section class="orders-section" id="orders">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="eyebrow" data-i18n="orderManagement">ORDER MANAGEMENT</p>
+
+                        <h2 data-i18n="customerOrders">Customer Orders</h2>
+
+                        <p class="section-description" data-i18n="reviewAssignedOrders">
+                            Review assigned orders and update their processing status.
+                        </p>
+                    </div>
+
+                    <button id="refresh-orders" class="refresh-btn">
+                        <span>↻</span>
+                        <span data-i18n="refreshOrders">Refresh Orders</span>
+                    </button>
+
+                </div>
+
+                <div class="orders-content">
+                    <div id="partner-orders-list">
+                        <div class="loading-message" data-i18n="loadingOrders">
+                            Loading orders...
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <footer class="partner-footer">
+                <span>© 2026 Khet Se Ghar</span>
+                <span data-i18n="footerTagline">Connecting Farms to Homes.</span>
+                <a href="mailto:support@khetseghar.in">
+                    support@khetseghar.in
+                </a>
+            </footer>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<div id="partner-voice-widget">
+
+    <button id="partner-voice-toggle" type="button" title="Open Voice Assistant">
+        🎙️
+    </button>
+
+    <div id="partner-voice-panel">
+
+        <div class="partner-voice-header">
+            <h3>🎙️ Partner Voice Assistant</h3>
+            <button id="partner-voice-close" type="button">×</button>
+        </div>
+
+        <p class="partner-voice-description">
+            Use voice commands to manage your customer orders.
+        </p>
+
+        <select id="partner-voice-language">
+            <option value="en-IN">English</option>
+            <option value="hi-IN">हिन्दी</option>
+            <option value="or-IN">ଓଡ଼ିଆ</option>
+        </select>
+
+        <button id="partner-voice-start" type="button">
+            🎤 Start Listening
+        </button>
+
+        <div id="partner-voice-status">
+            Assistant is ready.
+        </div>
+
+        <div id="partner-voice-transcript">
+            Your spoken command will appear here.
+        </div>
+
+        <div id="partner-voice-response">
+            Your assistant's response will appear here.
+        </div>
+
+    </div>
+</div>
+
+
+<script src="js/translations.js"></script>
+<script src="js/partner_dashboard.js"></script>
+<script src="js/partner-voice-assistance.js"></script>
+
+</body>
+</html>
